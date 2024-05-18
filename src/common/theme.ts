@@ -43,11 +43,11 @@ export const theme = createTheme({
       },
       styleOverrides: {
         contained: {
-          borderRadius: '0px',
+          borderRadius: '4px',
           padding: '14px 40px',
         },
         outlined: {
-          borderRadius: '0px',
+          borderRadius: '4px',
           padding: '15px 32px',
         },
       },

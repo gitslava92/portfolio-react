@@ -2,7 +2,7 @@ import { UI } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
 import { palette } from "@common/theme";
 import { LanguageSelect } from "@components/Molecules/LanguageSelect/LanguageSelect";
-import { LanguageSwitchBox } from "@components/Organisms/Header/Header.styles";
+import { DraverBox, Toolbar } from "@components/Organisms/Header/Header.styles";
 import { MenuItemType } from "@components/Pages/LandingPage/LandingPage";
 import { Menu } from "@mui/icons-material";
 import {
@@ -15,7 +15,6 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  Toolbar,
   Typography,
 } from "@mui/material";
 import { Box, Container } from "@mui/system";
@@ -76,7 +75,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
     <Box component="header" ref={ref} id={id}>
       <AppBar component="nav" ref={ref} color="secondary">
         <Container>
-          <Toolbar sx={{ padding: "0px !important" }}>
+          <Toolbar>
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -97,9 +96,6 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
             >
               {tca("Pustovit Viacheslav")}
             </Typography>
-            <Box mr={3} display={{ xs: "none", md: "block" }}>
-              <LanguageSelect />
-            </Box>
             <Box sx={{ display: { xs: "none", md: "block" } }}>
               {menuItems.map((item) => (
                 <Button
@@ -131,10 +127,10 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
             },
           }}
         >
-          <LanguageSwitchBox>
+          <DraverBox>
             {drawer}
-            <LanguageSelect />
-          </LanguageSwitchBox>
+            <LanguageSelect isMobile />
+          </DraverBox>
         </Drawer>
       </nav>
     </Box>

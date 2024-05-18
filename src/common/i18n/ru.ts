@@ -16,6 +16,8 @@ export const ru = {
       telegram: "телеграм",
       "Russia, Sevastopol": "Россия, Севастополь",
       socials: "соц. сети",
+      "send message": "отправить сообщение",
+      copyrights: "все права защищены",
       'i am a web developer from Russia, Crimea. i am currently working full-time as a junior web developer at a "Source" company. i want to get more work and improve my web developer skills.':
         'я веб-разработчик из Севастополя. в настоящее время работаю в компании "Соурс" на должности junior web developer и хочу получить больше интересной работы и улучшить свои навыки разработчика...',
       "i am inspired by creating great work with people who are as passionate as I am about building something awesome.":
@@ -24,6 +26,8 @@ export const ru = {
         "активное участие в большом стартап проекте, позволило мне приобрести большой опыт за короткое время.",
       "i have always been convinced of the importance of education. i try to learn something new every day.":
         "я всегда был убежден в важности образования. каждый день стараюсь узнавать что-то новое.",
+      "take a look at the reviews of my customers and ensure the quality of my services.":
+        "ознакомьтесь с отзывами моих клиентов и убедитесь в качестве моей работы.",
     },
   },
 };

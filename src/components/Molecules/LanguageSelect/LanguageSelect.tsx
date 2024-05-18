@@ -11,28 +11,41 @@ import { styled } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export const Select = styled(MUISelect)(({ theme }) => ({
+interface LanguageSelectProps {
+  isMobile?: boolean;
+}
+
+export const Select = styled(MUISelect, {
+  shouldForwardProp: (prop) => prop !== "isMobile",
+})<{ isMobile: boolean }>(({ theme, isMobile }) => ({
   display: "flex",
   alignItems: "center",
   fontWeight: "400",
-  color: theme.palette.primary.main,
+  color: isMobile
+    ? theme.palette.primary.main
+    : theme.palette.primary.contrastText,
   maxWidth: 60,
   textTransform: "uppercase",
   border: "none",
   "& .MuiSelect-select": {
     paddingBottom: 0,
+    color: isMobile
+      ? theme.palette.primary.main
+      : theme.palette.primary.contrastText,
   },
   "&:before": {
     borderBottom: "none",
   },
   svg: {
-    color: theme.palette.primary.main,
+    color: isMobile
+      ? theme.palette.primary.main
+      : theme.palette.primary.contrastText,
   },
 }));
 
 const initialLanguage = languages[1].id;
 
-export const LanguageSelect = () => {
+export const LanguageSelect = ({ isMobile }: LanguageSelectProps) => {
   const [languageId, setLanguageId] = useState<string>(initialLanguage);
   const { i18n } = useTranslation();
 
@@ -62,12 +75,16 @@ export const LanguageSelect = () => {
       variant="standard"
       IconComponent={ExpandMore}
       onChange={handleChangeLanguage}
+      isMobile={isMobile}
     >
       {languages.map((lang) => (
         <MenuItem
           key={lang.id}
           value={lang.id}
-          sx={{ textTransform: "uppercase", color: palette.primary.main }}
+          sx={{
+            textTransform: "uppercase",
+            color: palette.primary.main,
+          }}
         >
           {lang.title}
         </MenuItem>

@@ -6,7 +6,8 @@ export enum CONTACTS_LINKS {
   PHONE = "+79783165315",
   EMAIL = "webslava92@gmail.com",
   ADDRESS = "Russia, Sevastopol",
-  TELEGRAM = "@Time2Cod",
+  MAP_LINK = "https://yandex.ru/maps/-/CDbH4MIi",
+  TELEGRAM = "Time2Cod",
 }
 
 export enum SOCIALS_LINKS {
@@ -44,3 +45,5 @@ export enum UI {
 }
 
 export const LANGUAGE_KEY = "language";
+
+export const EMAIL_URL = 'https://webslava92.ru/send_email.php';

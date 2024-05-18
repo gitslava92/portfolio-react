@@ -21,7 +21,7 @@ export const Footer = forwardRef<HTMLDivElement, FooterProps>((props, ref) => {
     >
       <Typography variant="body1" color="primary" textAlign="center">{`${tc(
         "copyrights"
-      )} ${new Date().getFullYear()} ${t("Pustovit Viacheslav")}`}</Typography>
+      )}, ${new Date().getFullYear()} ${t("Pustovit Viacheslav")}`}</Typography>
     </Box>
   );
 });

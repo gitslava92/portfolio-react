@@ -1,6 +1,12 @@
+import { Toolbar as MUIToolbar } from "@mui/material";
 import { Box, styled } from "@mui/system";
 
-export const LanguageSwitchBox = styled(Box)(({ theme }) => ({
+export const Toolbar = styled(MUIToolbar)({
+  padding: "0px !important",
+  position: "relative",
+});
+
+export const DraverBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

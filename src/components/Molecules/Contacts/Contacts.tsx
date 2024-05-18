@@ -1,15 +1,35 @@
 import { CONTACTS_LINKS } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
 import { LinkedIn, Twitter, GitHub } from "@mui/icons-material";
-import { Typography } from "@mui/material";
+import { Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
 
 const getContacts = (tc: (msg: string) => string) => {
   return [
-    { id: 0, title: "phone", value: CONTACTS_LINKS.PHONE },
-    { id: 1, title: "email", value: CONTACTS_LINKS.EMAIL },
-    { id: 2, title: "address", value: tc(String(CONTACTS_LINKS.ADDRESS)) },
-    { id: 3, title: "telegram", value: CONTACTS_LINKS.TELEGRAM },
+    {
+      id: 0,
+      title: tc("phone"),
+      value: CONTACTS_LINKS.PHONE,
+      link: `tel:${CONTACTS_LINKS.PHONE}`,
+    },
+    {
+      id: 1,
+      title: tc("email"),
+      value: CONTACTS_LINKS.EMAIL,
+      link: `mailto:${CONTACTS_LINKS.EMAIL}`,
+    },
+    {
+      id: 2,
+      title: tc("address"),
+      value: tc(String(CONTACTS_LINKS.ADDRESS)),
+      link: CONTACTS_LINKS.MAP_LINK,
+    },
+    {
+      id: 3,
+      title: tc("telegram"),
+      value: CONTACTS_LINKS.TELEGRAM,
+      link: `https://t.me/${CONTACTS_LINKS.TELEGRAM}`,
+    },
   ];
 };
 
@@ -30,7 +50,15 @@ export const Contacts = () => {
           <Typography variant="h5" sx={{ marginRight: 2, minWidth: 80 }}>{`${tc(
             contact.title
           )}:`}</Typography>
-          <Typography variant="body1">{contact.value}</Typography>
+          <Typography
+            component={Link}
+            variant="body1"
+            href={contact.link}
+            sx={{ textDecoration: "none" }}
+            target="_blank"
+          >
+            {contact.value}
+          </Typography>
         </Box>
       ))}
 
@@ -41,7 +69,11 @@ export const Contacts = () => {
         >{`${tc("socials")}:`}</Typography>
         {socials.map((social) => {
           const Icon = social.icon;
-          return <Icon key={social.id} />;
+          return (
+            <Link key={social.id} href={social.link} target="_blank">
+              <Icon />
+            </Link>
+          );
         })}
       </Box>
     </>
