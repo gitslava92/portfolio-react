@@ -55,11 +55,11 @@ export const ContactForm = ({
     <Grid container spacing={3}>
       <Grid item xs={12} md={isModalMode ? 12 : 4}>
         <Title variant="h2" sx={{ marginBottom: 1 }}>
-          {tc(isModalMode ? "let’s work together" : "contact")}
+          {tc(isModalMode ? "let’s work together" : "contact me")}
         </Title>
         <Typography variant="body1" sx={{ marginBottom: 2 }}>
           {tca(
-            "are you working on something great?! I would love to help make it happen! drop me a letter and start your project right now! just do it.",
+            "are you working on something great?! i would love to help make it happen! drop me a letter and start your project right now! just do it.",
             "! "
           )}
         </Typography>

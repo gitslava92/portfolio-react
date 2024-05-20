@@ -23,7 +23,7 @@ export const Hello = forwardRef<HTMLDivElement, HelloProps>((props, ref) => {
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 2 }}>
             {tca(
-              'i am a web developer from Russia, Crimea. i am currently working full-time as a junior web developer at a "Source" company. i want to get more work and improve my web developer skills.',
+              'i am a web developer from Russia, Crimea. i am currently working full-time at a "Source" company. i want to get more work and improve my web developer skills.',
               ". "
             )}
             .
