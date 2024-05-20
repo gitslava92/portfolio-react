@@ -47,7 +47,7 @@ const sections = [
 const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
   return [
     {
-      id: 0,
+      id: 1,
       title: tc("building company “Grandstroy92”"),
       section: "freelance",
       period: "March, 2024",
@@ -56,11 +56,15 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
         '"UMS-STROY" company is engaged in construction and repair.'
       ),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
-      img: "./portfolio/grand-stroy/grand-stroy-1.jpg",
+      img: [
+        "./portfolio/grand-stroy/grand-stroy-1.jpg",
+        "./portfolio/grand-stroy/grand-stroy-2.jpg",
+        "./portfolio/grand-stroy/grand-stroy-3.jpg",
+      ],
       link: "https://grandstroy92.ru/",
     },
     {
-      id: 1,
+      id: 2,
       title: tc("building company “UMS-STROY”"),
       section: "freelance",
       period: "April, 2023",
@@ -69,11 +73,15 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
         '"UMS-STROY" company is engaged in construction and repair.'
       ),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
-      img: "./portfolio/ums-stroy/ums-stroy-1.jpg",
+      img: [
+        "./portfolio/ums-stroy/ums-stroy-1.jpg",
+        "./portfolio/ums-stroy/ums-stroy-2.jpg",
+        "./portfolio/ums-stroy/ums-stroy-3.jpg",
+      ],
       link: "https://ums-stroy.ru/",
     },
     {
-      id: 2,
+      id: 3,
       title: tc("building company “KAMOZA A.I.”"),
       section: "freelance",
       period: "April, 2022",
@@ -82,29 +90,41 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
         '"KAMOZA A.I." company is engaged in construction and repair.'
       ),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
-      img: "./portfolio/kamoza/kamoza-1.jpg",
+      img: [
+        "./portfolio/kamoza/kamoza-1.jpg",
+        "./portfolio/kamoza/kamoza-2.jpg",
+        "./portfolio/kamoza/kamoza-3.jpg",
+      ],
       link: "https://kamoza.webslava92.ru/",
     },
     {
-      id: 3,
+      id: 4,
       title: tc("marketplace “Profital”"),
       section: "teamWork",
       period: "April, 2023",
       sectionTitle: tc("freelance"),
       subtitle: tc("“Profital” company is engaged in construction and repair."),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
-      img: "./portfolio/profital/profital-1.jpg",
+      img: [
+        "./portfolio/profital/profital-1.jpg",
+        "./portfolio/profital/profital-2.jpg",
+        "./portfolio/profital/profital-3.jpg",
+      ],
       link: "https://profital.io",
     },
     {
-      id: 4,
+      id: 5,
       title: tc("electron app “CSV editor”"),
       section: "petProject",
       period: "April, 2023",
       sectionTitle: tc("freelance"),
       subtitle: tc("“Profital” company is engaged in construction and repair."),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
-      img: "./portfolio/profital/profital-1.jpg",
+      img: [
+        "./portfolio/profital/profital-1.jpg",
+        "./portfolio/profital/profital-2.jpg",
+        "./portfolio/profital/profital-3.jpg",
+      ],
       link: "https://profital.io",
     },
   ];
@@ -113,6 +133,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
 export const Portfolio = forwardRef<HTMLDivElement, PortfolioProps>(
   (props, ref) => {
     const { id } = props;
+
     const { tc } = useCustomTranslation();
     const [filter, setFilter] = useState(sections[0].value);
 
@@ -128,7 +149,7 @@ export const Portfolio = forwardRef<HTMLDivElement, PortfolioProps>(
         <Title variant="h2" sx={{ marginBottom: 1 }}>
           {tc("portfolio")}
         </Title>
-        <Box display="flex" gap={3} mb={1}>
+        <Box display="flex" gap={{ xs: 1, md: 3 }} mb={1} flexWrap="wrap">
           {sections.map((section) => (
             <Button
               variant="text"

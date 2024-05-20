@@ -40,7 +40,11 @@ const socials = [
   { id: 3, link: "https://github.com/gitslava92", icon: GitHub },
 ];
 
-export const Contacts = () => {
+interface ContactsInfoProps {
+  setModalOpen: () => void;
+}
+
+export const ContactsInfo = ({ setModalOpen }: ContactsInfoProps) => {
   const { tc } = useCustomTranslation();
 
   return (
