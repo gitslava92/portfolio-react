@@ -7,18 +7,20 @@ interface SkillsProps {
   id?: string;
 }
 
-const skills = [
-  {
-    id: 0,
-    title: "Key Skills",
-    text: "Javascript, Typescript, ReactJS, VueJS, HTML, CSS, SASS, MaterialUI, GraphQl, REST, WebSocket, Axios, Redux Toolkit, Redux-Saga, Git, Docker, Webpack, Vite, Styled Components",
-  },
-  {
-    id: 1,
-    title: "Additional Skills",
-    text: "Teamwork, SCRUM, the ability to understand someone else's code, Photoshop, Figma, high learning speed",
-  },
-];
+const getSkills = (tc: (msg: string) => string) => {
+  return [
+    {
+      id: 0,
+      title: tc("key skills"),
+      text: "Javascript, Typescript, ReactJS, VueJS, HTML, CSS, SASS, MaterialUI, GraphQl, REST, WebSocket, Axios, Redux Toolkit, Redux-Saga, Git, Docker, Webpack, Vite, Styled Components",
+    },
+    {
+      id: 1,
+      title: tc("additional skills"),
+      text: "Teamwork, SCRUM, the ability to understand someone else's code, Photoshop, Figma, high learning speed",
+    },
+  ];
+};
 
 export const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
   const { id } = props;
@@ -39,7 +41,7 @@ export const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
         </Grid>
         <Grid item xs={12} md={8}>
           <Grid container spacing={2}>
-            {skills.map((skill) => (
+            {getSkills(tc).map((skill) => (
               <Grid item xs={12} md={6} key={skill.id}>
                 <ItemTitle variant="h4">{tc(skill.title)}</ItemTitle>
                 <Typography variant="body1">{tc(skill.text)}</Typography>

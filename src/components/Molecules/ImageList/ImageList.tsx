@@ -46,7 +46,9 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
           <ImageListItem
             key={item.id}
             onClick={() => setSelected(item.id)}
-            sx={{ cursor: "pointer" }}
+            sx={{
+              cursor: "pointer",
+            }}
           >
             <img
               srcSet={`${item.img[0]}?w=248&fit=crop&auto=format&dpr=2 2x`}
@@ -58,6 +60,7 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
               title={item.title}
               subtitle={<span>{item.period}</span>}
               position="below"
+              sx={{ "& .MuiImageListItemBar-title": { whiteSpace: "wrap" } }}
             />
           </ImageListItem>
         ))}
@@ -104,7 +107,14 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
           )}
 
           <Box display="flex" justifyContent="right" gap={3} mt={3}>
-            <Button variant="outlined">{tc("visit website")}</Button>
+            <Button
+              variant="outlined"
+              onClick={() =>
+                window.open(`${currentPortfolioItem?.link}`, "_blank")
+              }
+            >
+              {tc("visit website")}
+            </Button>
             <Button type="submit" onClick={handleModalClose}>
               {tc("back to CV")}
             </Button>

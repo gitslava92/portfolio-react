@@ -4,6 +4,7 @@ import { palette } from "@common/theme";
 import { LanguageSelect } from "@components/Molecules/LanguageSelect/LanguageSelect";
 import { DraverBox, Toolbar } from "@components/Organisms/Header/Header.styles";
 import { MenuItemType } from "@components/Pages/LandingPage/LandingPage";
+import { Logo } from "@components/assets/Logo";
 import { Menu } from "@mui/icons-material";
 import {
   AppBar,
@@ -15,7 +16,6 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
-  Typography,
 } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import { Ref, RefObject, forwardRef, useState } from "react";
@@ -31,7 +31,7 @@ interface HeaderProps {
 
 export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
   const { menuItems, refs, window, id } = props;
-  const { tc, tca } = useCustomTranslation();
+  const { tc } = useCustomTranslation();
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -52,9 +52,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        {tca("Pustovit Viacheslav")}
-      </Typography>
+      <Logo color={palette.primary.main} />
       <Divider />
       <List>
         {menuItems.map((item) => (
@@ -76,6 +74,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
       <AppBar component="nav" ref={ref} color="secondary">
         <Container>
           <Toolbar>
+            <Logo color={palette.primary.main} />
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -85,17 +84,6 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
             >
               <Menu color="primary" />
             </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{
-                flexGrow: 1,
-                display: { xs: "none", md: "block" },
-                color: palette.primary.main,
-              }}
-            >
-              {tca("Pustovit Viacheslav")}
-            </Typography>
             <Box sx={{ display: { xs: "none", md: "block" } }}>
               {menuItems.map((item) => (
                 <Button

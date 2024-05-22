@@ -13,7 +13,7 @@ export interface PortfolioItem {
   sectionTitle: string;
   subtitle: string;
   stack: string;
-  img: string;
+  img: string[];
   link: string;
 }
 
@@ -40,7 +40,7 @@ const sections = [
   {
     id: 3,
     value: "petProject",
-    title: "pet project",
+    title: "pet projects",
   },
 ];
 
@@ -48,12 +48,12 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
   return [
     {
       id: 1,
-      title: tc("building company “Grandstroy92”"),
+      title: tc("building company “GRANDSTROY”"),
       section: "freelance",
       period: "March, 2024",
       sectionTitle: tc("freelance"),
       subtitle: tc(
-        '"UMS-STROY" company is engaged in construction and repair.'
+        "“GRANDSTROY” company is engaged in construction and repair."
       ),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
       img: [
@@ -70,7 +70,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       period: "April, 2023",
       sectionTitle: tc("freelance"),
       subtitle: tc(
-        '"UMS-STROY" company is engaged in construction and repair.'
+        "“UMS-STROY” company is engaged in construction and repair."
       ),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
       img: [
@@ -87,7 +87,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       period: "April, 2022",
       sectionTitle: tc("freelance"),
       subtitle: tc(
-        '"KAMOZA A.I." company is engaged in construction and repair.'
+        "“KAMOZA A.I.” company is engaged in construction and repair."
       ),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
       img: [
@@ -99,11 +99,13 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
     },
     {
       id: 4,
-      title: tc("marketplace “Profital”"),
+      title: tc("marketplace “PROFITAL”"),
       section: "teamWork",
       period: "April, 2023",
-      sectionTitle: tc("freelance"),
-      subtitle: tc("“Profital” company is engaged in construction and repair."),
+      sectionTitle: tc("team work"),
+      subtitle: tc(
+        "a marketplace “PROFITAL” where buyers and sellers can safely make transactions."
+      ),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
       img: [
         "./portfolio/profital/profital-1.jpg",
@@ -114,10 +116,10 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
     },
     {
       id: 5,
-      title: tc("electron app “CSV editor”"),
+      title: tc("electron.js app “CSV EDITOR”"),
       section: "petProject",
       period: "April, 2023",
-      sectionTitle: tc("freelance"),
+      sectionTitle: tc("pet projects"),
       subtitle: tc("“Profital” company is engaged in construction and repair."),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
       img: [

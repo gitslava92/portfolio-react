@@ -33,7 +33,7 @@ export const Hello = forwardRef<HTMLDivElement, HelloProps>((props, ref) => {
 
           <Box display="flex" gap={3} mt={2}>
             <Button onClick={setModalOpen}>{tc("contact me")}</Button>
-            <Button variant="outlined">{tc("download CV")}</Button>
+            <Button variant="outlined">{tc("download cv")}</Button>
           </Box>
         </Grid>
         <Grid item xs={12} md={6}>
