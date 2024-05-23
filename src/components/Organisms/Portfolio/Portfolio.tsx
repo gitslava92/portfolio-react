@@ -9,7 +9,7 @@ export interface PortfolioItem {
   id: number;
   title: string;
   section: string;
-  period: string;
+  period: string[];
   sectionTitle: string;
   subtitle: string;
   stack: string;
@@ -50,7 +50,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       id: 1,
       title: tc("building company “GRANDSTROY”"),
       section: "freelance",
-      period: "March, 2024",
+      period: ["2024-03-01T00:00:00Z"],
       sectionTitle: tc("freelance"),
       subtitle: tc(
         "“GRANDSTROY” company is engaged in construction and repair."
@@ -67,7 +67,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       id: 2,
       title: tc("building company “UMS-STROY”"),
       section: "freelance",
-      period: "April, 2023",
+      period: ["2022-06-01T00:00:00Z"],
       sectionTitle: tc("freelance"),
       subtitle: tc(
         "“UMS-STROY” company is engaged in construction and repair."
@@ -84,7 +84,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       id: 3,
       title: tc("building company “KAMOZA A.I.”"),
       section: "freelance",
-      period: "April, 2022",
+      period: ["2022-05-01T00:00:00Z"],
       sectionTitle: tc("freelance"),
       subtitle: tc(
         "“KAMOZA A.I.” company is engaged in construction and repair."
@@ -101,7 +101,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       id: 4,
       title: tc("marketplace “PROFITAL”"),
       section: "teamWork",
-      period: "April, 2023",
+      period: ["2023-04-01T00:00:00Z"],
       sectionTitle: tc("team work"),
       subtitle: tc(
         "a marketplace “PROFITAL” where buyers and sellers can safely make transactions."
@@ -118,7 +118,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       id: 5,
       title: tc("electron.js app “CSV EDITOR”"),
       section: "petProject",
-      period: "April, 2023",
+      period: ["2023-04-01T00:00:00Z"],
       sectionTitle: tc("pet projects"),
       subtitle: tc("“Profital” company is engaged in construction and repair."),
       stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",

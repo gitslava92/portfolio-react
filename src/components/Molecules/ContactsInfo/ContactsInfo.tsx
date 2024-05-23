@@ -1,5 +1,6 @@
 import { CONTACTS_LINKS } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
+import { Vk } from "@components/assets/vk";
 import { LinkedIn, Twitter, GitHub } from "@mui/icons-material";
 import { Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
@@ -35,7 +36,7 @@ const getContacts = (tc: (msg: string) => string) => {
 
 const socials = [
   { id: 0, link: "https://www.linkedin.com", icon: LinkedIn },
-  { id: 1, link: "https://vk.com/webslava92", icon: LinkedIn },
+  { id: 1, link: "https://vk.com/webslava92", icon: Vk },
   { id: 2, link: "https://twitter.com/", icon: Twitter },
   { id: 3, link: "https://github.com/gitslava92", icon: GitHub },
 ];
@@ -66,7 +67,7 @@ export const ContactsInfo = ({ setModalOpen }: ContactsInfoProps) => {
         </Box>
       ))}
 
-      <Box display="flex">
+      <Box display="flex" gap={1}>
         <Typography
           variant="body1"
           sx={{ marginRight: 2, minWidth: 80 }}
@@ -74,7 +75,12 @@ export const ContactsInfo = ({ setModalOpen }: ContactsInfoProps) => {
         {socials.map((social) => {
           const Icon = social.icon;
           return (
-            <Link key={social.id} href={social.link} target="_blank">
+            <Link
+              key={social.id}
+              href={social.link}
+              target="_blank"
+              sx={{ display: "flex", alignItems: "center" }}
+            >
               <Icon />
             </Link>
           );

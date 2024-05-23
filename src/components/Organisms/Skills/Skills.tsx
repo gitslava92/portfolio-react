@@ -12,12 +12,14 @@ const getSkills = (tc: (msg: string) => string) => {
     {
       id: 0,
       title: tc("key skills"),
-      text: "Javascript, Typescript, ReactJS, VueJS, HTML, CSS, SASS, MaterialUI, GraphQl, REST, WebSocket, Axios, Redux Toolkit, Redux-Saga, Git, Docker, Webpack, Vite, Styled Components",
+      text: "Javascript, Typescript, ReactJS, VueJS, HTML, CSS, SASS, MaterialUI, Styled Components, GraphQl, REST, WebSocket, Axios, Redux Toolkit, Redux-Saga, Git, Docker, Webpack, Vite",
     },
     {
       id: 1,
       title: tc("additional skills"),
-      text: "Teamwork, SCRUM, the ability to understand someone else's code, Photoshop, Figma, high learning speed",
+      text: tc(
+        "the ability to work in a team, the ability to understand someone else's code, SCRUM, Photoshop, Figma, high learning speed"
+      ),
     },
   ];
 };
@@ -35,7 +37,7 @@ export const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
           </Title>
           <Typography variant="body1" sx={{ marginBottom: 2 }}>
             {tc(
-              "i am inspired by creating great work with people who are as passionate as I am about building something awesome."
+              "i am inspired by the opportunity to work with professionals who, like me, are passionate about creating something truly unique and meaningful."
             )}
           </Typography>
         </Grid>

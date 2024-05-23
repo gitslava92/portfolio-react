@@ -1,3 +1,4 @@
+import { getPeriod } from "@common/helpers";
 import { useCustomTranslation } from "@common/i18n";
 import { ItemTitle, Section, Title } from "@components/Atoms/styles";
 import { Grid, Typography } from "@mui/material";
@@ -8,26 +9,20 @@ interface EducationProps {
   id?: string;
 }
 
-const getEducations = (tc: (msg: string) => string) => {
-  return [
-    {
-      id: 0,
-      title: tc("Vadim Prokopchuk's layout course"),
-      subtitle: tc("from 0 to 1"),
-      period: "Apr, 2015 — May, 2015",
-      text: tc(
-        "Learn to use App Engine, Google's Platform as a Service, to build the backend for web apps that scale not only as your user base grows but as request volumes peaks with sudden demand."
-      ),
-    },
-  ];
-};
+const educations = [
+  {
+    id: 0,
+    title: "Vadim Prokopchuk's layout course",
+    subtitle: "from 0 to 1",
+    period: ["2020-12-01T00:00:00Z", "2021-02-14T00:00:00Z"],
+    text: "html, css/sass/scss, BEM methodology, jquery basics, js basics, gulp, git, adaptive layout, website hosting",
+  },
+];
 
 export const Education = forwardRef<HTMLDivElement, EducationProps>(
   (props, ref) => {
     const { id } = props;
-    const { tc, tca } = useCustomTranslation();
-
-    const educations = getEducations(tc);
+    const { t, tc, tca } = useCustomTranslation();
 
     return (
       <Section component="section" ref={ref} id={id}>
@@ -59,9 +54,9 @@ export const Education = forwardRef<HTMLDivElement, EducationProps>(
                     </Typography>
                   </Box>
                   <Typography variant="body1" sx={{ marginBottom: 1 }}>
-                    {tc(education.period)}
+                    {getPeriod(education.period, tc)}
                   </Typography>
-                  <Typography variant="body1">{tc(education.text)}</Typography>
+                  <Typography variant="body1">{t(education.text)}</Typography>
                 </Grid>
               ))}
             </Grid>

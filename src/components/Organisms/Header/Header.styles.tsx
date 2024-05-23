@@ -7,6 +7,11 @@ export const Toolbar = styled(MUIToolbar)({
   justifyContent: "space-between",
 });
 
+export const DraverRootBox = styled(Box)(({ theme }) => ({
+  textAlign: "center",
+  paddingTop: theme.spacing(2),
+}));
+
 export const DraverBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",

@@ -2,7 +2,11 @@ import { UI } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
 import { palette } from "@common/theme";
 import { LanguageSelect } from "@components/Molecules/LanguageSelect/LanguageSelect";
-import { DraverBox, Toolbar } from "@components/Organisms/Header/Header.styles";
+import {
+  DraverBox,
+  DraverRootBox,
+  Toolbar,
+} from "@components/Organisms/Header/Header.styles";
 import { MenuItemType } from "@components/Pages/LandingPage/LandingPage";
 import { Logo } from "@components/assets/Logo";
 import { Menu } from "@mui/icons-material";
@@ -51,7 +55,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <DraverRootBox onClick={handleDrawerToggle}>
       <Logo color={palette.primary.main} />
       <Divider />
       <List>
@@ -66,7 +70,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
           </ListItem>
         ))}
       </List>
-    </Box>
+    </DraverRootBox>
   );
 
   return (

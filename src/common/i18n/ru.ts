@@ -21,24 +21,36 @@ export const ru = {
       socials: "соц. сети",
       "send message": "отправить сообщение",
       copyrights: "все права защищены",
-      'i am a web developer from Russia, Crimea. i am currently working full-time at a "Source" company. i want to get more work and improve my web developer skills.':
-        'я веб-разработчик из Севастополя. в настоящее время работаю в компании "Соурс" и хочу получить больше интересной работы и улучшить свои навыки разработчика...',
+      "hi! I am a Frontend developer with over 2 years of react development experience. i would like to get more interesting tasks and improve my development skills.":
+        "привет! Я Frontend разработчик с опытом разработки на react более 2х лет. хотел бы получить больше интересных задач и улучшить свои навыки разработки.",
 
       // Skills
-      'key skills': 'ключевые навыки',
-      'additional skills': 'дополнительные навыки',
-      "i am inspired by creating great work with people who are as passionate as I am about building something awesome.":
-        "меня вдохновляет работа с людьми, которые так же, как и я, увлечены созданием чего-то потрясающего",
+      "key skills": "ключевые навыки",
+      "additional skills": "дополнительные навыки",
+      "i am inspired by the opportunity to work with professionals who, like me, are passionate about creating something truly unique and meaningful.":
+        "меня вдохновляет возможность работать с профессионалами, которые, так же как и я, увлечены созданием чего-то действительно уникального и значимого. ",
+      "the ability to work in a team, the ability to understand someone else's code, SCRUM, Photoshop, Figma, high learning speed":
+        "умение работать в команде, умение разбираться в чужом коде, SCRUM, Photoshop, Figma, высокая скорость обучения",
 
       // Experiense
-      "active participation in a large startup project allowed me to gain a lot of experience in a short time.":
-        "активное участие в большом стартап проекте, позволило мне приобрести большой опыт за короткое время.",
+      present: "настоящее время",
+      sourсe: "соурс",
+      "my love of programming and active participation in a large startup project allowed me to gain a lot of experience in a short time.":
+        "любовь к программированию и активное участие в большом стартап проекте позволило мне получить большой опыт за короткое время.",
+      "copying (creating templates) and layout of html, css, js, jquery sites, code and content optimization":
+        "копирование (создание шаблонов) и верстка сайтов html, css, js, jquery, bootstrap, оптимизация кода и контента",
+      "website development on react, vue, pet project: CSV editor - desktop application on electron.js + react.":
+        "разработка веб-сайтов на react, vue, персональный проект: редактор CSV-файлов - настольное приложение на electron.js + react.",
+      "development of a trading platform (marketplace): routing, authorization (jwt), chats (based on mattermost), offers, responses, transactions, payments, reviews, ratings, disputes, user account, administrator account: authorization, payment administration, dispute resolution, chats, currencies, wallets.":
+        "разработка торговой площадки (маркетплейса): роутинг, авторизация (jwt), чаты (на основе mattermost), офферы, отклики, сделки, платежи, отзывы, рейтинги, споры, кабинет пользователя, кабинет администратора: авторизация, администрирование платежей, разрешение споров, чаты, валюты, кошельки.",
 
       // Education
       "i have always been convinced of the importance of education. i try to learn something new every day.":
         "я всегда был убежден в важности образования. каждый день стараюсь узнавать что-то новое.",
-        "Vadim Prokopchuk\'s layout course": "Курс по верстке Вадима Прокопчука",
-        'from 0 to 1': 'от 0 до 1',
+      "Vadim Prokopchuk's layout course": "Курс по верстке Вадима Прокопчука",
+      "from 0 to 1": "от 0 до 1",
+      "html, css/sass/scss, BEM methodology, jquery basics, js basics, gulp, git, adaptive layout, website hosting":
+        "html, css/sass/scss, методология БЭМ, основы jquery, основы js, gulp, git, адаптивная верстка, деплой сайта на хостинг",
 
       // Portfolio
       "all projects": "все проекты",
@@ -66,14 +78,20 @@ export const ru = {
       "Mihail Boyko": "Михаил Бойко",
       "director building company “UMS-STROY”":
         'директор строительной компании "ЮМС-СТРОЙ"',
+      "i got exactly what I wanted and in a short time. They are very attentive and comfortable in communication. it was a pleasure to do business.":
+        "получил именно то что хотел и в короткий срок. очень внимательные и комфортный в общении. было приятно иметь дело.",
 
       "Dmitriy Kuhar": "Дмитрий Кухарь",
       "director building company “GRANDSTROY”":
         'директор строительной компании "ГРАНДСТРОЙ"',
+      "the site was developed quickly and exactly as I had planned. communication is at the highest level. great job!":
+        "сайт разработал быстро и именно таким, как я и планировал. коммуникация на высшем уровне. отличная работа!",
 
       "Aleksandr Kamoza": "Александр Камоза",
       "director building company “KAMOZA A.I.”":
         'директор строительной компании "КАМОЗА А.И."',
+      "a landing page with examples of work was urgently needed. i turned to Slava and he helped. everything is wonderful!":
+        "срочно был нужен лендинг с примерами работ. обратился к Славе и он помог. все замечательно!",
 
       // Reviews
       "take a look at the reviews of my customers and ensure the quality of my services.":

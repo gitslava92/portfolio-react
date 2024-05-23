@@ -23,10 +23,9 @@ export const Hello = forwardRef<HTMLDivElement, HelloProps>((props, ref) => {
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 2 }}>
             {tca(
-              'i am a web developer from Russia, Crimea. i am currently working full-time at a "Source" company. i want to get more work and improve my web developer skills.',
+              "hi! I am a Frontend developer with over 2 years of react development experience. i would like to get more interesting tasks and improve my development skills.",
               ". "
             )}
-            .
           </Typography>
 
           <ContactsInfo setModalOpen={setModalOpen} />

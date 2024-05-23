@@ -1,3 +1,4 @@
+import { getPeriod } from "@common/helpers";
 import { useCustomTranslation } from "@common/i18n";
 import { theme } from "@common/theme";
 import { Title } from "@components/Atoms/styles";
@@ -58,7 +59,7 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
             />
             <ImageListItemBar
               title={item.title}
-              subtitle={<span>{item.period}</span>}
+              subtitle={<span>{getPeriod(item.period || [], tc)}</span>}
               position="below"
               sx={{ "& .MuiImageListItemBar-title": { whiteSpace: "wrap" } }}
             />
@@ -98,7 +99,7 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
               sx={{ minWidth: 80 }}
             >{`${tc("date")}:`}</Typography>
             <Typography variant="body1">
-              {currentPortfolioItem?.period}
+              {getPeriod(currentPortfolioItem?.period || [], tc)}
             </Typography>
           </Box>
 
