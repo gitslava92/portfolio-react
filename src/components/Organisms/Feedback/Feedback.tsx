@@ -59,7 +59,12 @@ export const Feedback = forwardRef<HTMLDivElement, FeedbackProps>(
                       <Avatar></Avatar>
                     </Box>
                     <Box>
-                      <Box display="flex" gap={2}>
+                      <Box
+                        display="flex"
+                        gap={2}
+                        flexDirection={{ xs: "column", md: "row" }}
+                        mb={{ xs: 1, md: 0 }}
+                      >
                         <ItemTitle variant="h4">{tc(feedback.name)}</ItemTitle>
                         <Typography variant="subtitle2">
                           {tc(feedback.post)}

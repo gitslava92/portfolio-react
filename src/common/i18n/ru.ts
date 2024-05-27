@@ -7,7 +7,7 @@ export const ru = {
       education: "образование",
       portfolio: "портфолио",
       feedback: "отзывы",
-      "contact me": "контакты",
+      "contact me": "написать мне",
       "download cv": "скачать резюме",
       "i am Viacheslav": "Пустовит Вячеслав",
       "Pustovit Viacheslav": "Пустовит Вячеслав",
@@ -75,6 +75,8 @@ export const ru = {
         "приложение на electron.js “CSV-РЕДАКТОР”",
       '"CSV-editor" is an application for quickly checking and editing data in csv files':
         '"CSV-редактор" это приложение для быстрой проверки и редактирования данных в csv файлах',
+      "visit website": "посетить веб-сайт",
+      "back to cv": 'вернуться к резюме',
 
       // Feedback
       "Mihail Boyko": "Михаил Бойко",

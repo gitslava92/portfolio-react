@@ -102,7 +102,7 @@ export const ContactForm = ({
           <Box display="flex" justifyContent="right" gap={3} mt={2} mb={2}>
             {isModalMode && (
               <Button variant="outlined" onClick={setModalClose}>
-                {tc("back to CV")}
+                {tc("back to cv")}
               </Button>
             )}
             <Button type="submit">{tc("send message")}</Button>

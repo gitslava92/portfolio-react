@@ -68,12 +68,14 @@ export const en = {
       "building company “KAMOZA A.I.”": "building company “KAMOZA A.I.”",
       "“KAMOZA A.I.” company is engaged in construction and repair.":
         "“KAMOZA A.I.” company is engaged in construction and repair.",
-      "marketplace": "marketplace",
+      marketplace: "marketplace",
       "a marketplace where buyers and sellers can safely make transactions.":
         "a marketplace where buyers and sellers can safely make transactions.",
       "electron.js app “CSV-EDITOR”": "electron.js app “CSV-EDITOR”",
       '"CSV-editor" is an application for quickly checking and editing data in csv files':
         '"CSV-editor" is an application for quickly checking and editing data in csv files',
+      "visit website": "visit website",
+      "back to cv": "back to cv",
 
       // Feedback
       "Mihail Boyko": "Mihail Boyko",

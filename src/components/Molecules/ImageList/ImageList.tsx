@@ -4,6 +4,7 @@ import { Title } from "@components/Atoms/styles";
 import { Carousel } from "@components/Molecules/Carousel/Carousel";
 import { Modal } from "@components/Molecules/Modal/Modal";
 import { PortfolioItem } from "@components/Organisms/Portfolio/Portfolio";
+import { Close } from "@mui/icons-material";
 import {
   Button,
   ImageListItem,
@@ -11,6 +12,7 @@ import {
   ImageList as MUIImageList,
   Typography,
   useMediaQuery,
+  IconButton,
 } from "@mui/material";
 import { useTheme, Theme } from "@mui/material/styles";
 import { Box } from "@mui/system";
@@ -74,9 +76,16 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
           setClose={handleModalClose}
           maxWidth="85vw"
         >
-          <Title variant="h2" sx={{ marginBottom: 1 }}>
-            {currentPortfolioItem?.title}
-          </Title>
+          <Box display="flex" justifyContent="space-between" gap={1}>
+            <Title variant="h2" sx={{ marginBottom: 1 }}>
+              {currentPortfolioItem?.title}
+            </Title>
+            <Box>
+              <IconButton onClick={handleModalClose}>
+                <Close />
+              </IconButton>
+            </Box>
+          </Box>
 
           <Typography variant="body1" sx={{ marginBottom: 2 }}>
             {currentPortfolioItem?.subtitle}
@@ -118,7 +127,7 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
               {tc("visit website")}
             </Button>
             <Button type="submit" onClick={handleModalClose}>
-              {tc("back to CV")}
+              {tc("back to cv")}
             </Button>
           </Box>
         </Modal>
