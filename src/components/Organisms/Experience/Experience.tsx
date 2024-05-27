@@ -13,7 +13,7 @@ const experiences = [
   {
     id: 0,
     title: "Frontend Developer",
-    subtitle: "sourсe",
+    subtitle: "sourсe, ltd",
     period: ["2022-05-01T00:00:00Z", "present"],
     text: "development of a trading platform (marketplace): routing, authorization (jwt), chats (based on mattermost), offers, responses, transactions, payments, reviews, ratings, disputes, user account, administrator account: authorization, payment administration, dispute resolution, chats, currencies, wallets.",
   },
@@ -27,7 +27,7 @@ const experiences = [
   {
     id: 2,
     title: "HTML/CSS developer",
-    subtitle: "sourсe",
+    subtitle: "sourсe, ltd",
     period: ["2021-09-01T00:00:00Z", "2022-05-01T00:00:00Z"],
     text: "copying (creating templates) and layout of html, css, js, jquery sites, code and content optimization",
   },

@@ -4,14 +4,19 @@ import { UseTranslationResponse, useTranslation } from 'react-i18next';
 import { en } from './en';
 import { ru } from './ru';
 
+export enum LangTitle {
+  Eng = 'en',
+  Rus = 'ru'
+}
+
 export interface Languages {
   id: string;
   title: string;
 }
 
 export const languages = [
-  {id: 'en', title: 'eng' },
-  {id: 'ru', title: 'рус' },
+  {id: LangTitle.Eng, title: 'eng' },
+  {id: LangTitle.Rus, title: 'рус' },
 ];
 
 export const i18nInitConfig: InitOptions = {
@@ -22,8 +27,8 @@ export const i18nInitConfig: InitOptions = {
     ...en,
     ...ru,
   },
-  lng: 'ru', // if you're using a language detector, do not define the lng option
-  fallbackLng: 'ru',
+  lng: LangTitle.Rus, // if you're using a language detector, do not define the lng option
+  fallbackLng: LangTitle.Rus,
 
   interpolation: {
     escapeValue: false, // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape

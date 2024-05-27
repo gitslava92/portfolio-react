@@ -34,7 +34,7 @@ export const ru = {
 
       // Experiense
       present: "настоящее время",
-      sourсe: "соурс",
+      "sourсe, ltd": "соурс, ООО",
       "my love of programming and active participation in a large startup project allowed me to gain a lot of experience in a short time.":
         "любовь к программированию и активное участие в большом стартап проекте позволило мне получить большой опыт за короткое время.",
       "copying (creating templates) and layout of html, css, js, jquery sites, code and content optimization":
@@ -68,11 +68,13 @@ export const ru = {
       "building company “KAMOZA A.I.”": "строительная компания “КАМОЗА А.И.”",
       "“KAMOZA A.I.” company is engaged in construction and repair.":
         "компания “КАМОЗА А.И.” занимается строительством и ремонтом.",
-      "marketplace “PROFITAL”": "торговая площадка “ПРОФИТАЛ”",
-      "a marketplace “PROFITAL” where buyers and sellers can safely make transactions.":
-        "“ПРОФИТАЛ” - это торговая площадка, где покупатели и продавцы могут безопасно совершать сделки",
-      "electron.js app “CSV EDITOR”":
-        "приложение на electron.js “CSV РЕДАКТОР”",
+      "marketplace": "торговая площадка “ПРОФИТАЛ”",
+      "a marketplace where buyers and sellers can safely make transactions.":
+        "торговая площадка, где покупатели и продавцы могут безопасно совершать сделки",
+      "electron.js app “CSV-EDITOR”":
+        "приложение на electron.js “CSV-РЕДАКТОР”",
+      '"CSV-editor" is an application for quickly checking and editing data in csv files':
+        '"CSV-редактор" это приложение для быстрой проверки и редактирования данных в csv файлах',
 
       // Feedback
       "Mihail Boyko": "Михаил Бойко",
@@ -100,6 +102,12 @@ export const ru = {
       // Contact
       "are you working on something great?! i would love to help make it happen! drop me a letter and start your project right now! just do it.":
         "Вы работаете над чем-то грандиозным?! я бы с удовольствием помог воплотить это в жизнь! Напишите мне письмо прямо сейчас.",
+
+      // SpeedDeal
+      "toggle language to": "переключить язык на",
+      "toggle theme to": "toggle theme to",
+      english: "английский",
+      russian: 'русский',
     },
   },
 };

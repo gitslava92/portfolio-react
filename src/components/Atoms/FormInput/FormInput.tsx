@@ -30,7 +30,6 @@ export const FormInput = forwardRef(
       helperText,
       rules,
       control,
-      password,
       disabled,
       InputProps,
       placeholder,
@@ -93,15 +92,7 @@ export const FormInput = forwardRef(
             sx={sx}
           />
         )}
-        rules={
-          password
-            ? {
-                ...rules,
-                validate: (value) =>
-                  value === password || "Passwords do not match",
-              }
-            : { ...rules }
-        }
+        rules={rules}
         control={control}
         name={name}
       />

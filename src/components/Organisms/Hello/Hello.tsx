@@ -1,6 +1,7 @@
 import { useCustomTranslation } from "@common/i18n";
 import { Section } from "@components/Atoms/styles";
 import { ContactsInfo } from "@components/Molecules/ContactsInfo/ContactsInfo";
+import { ButtonsBox, ImageBox } from "@components/Organisms/Hello/Hello.styles";
 import { Button, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { forwardRef } from "react";
@@ -30,13 +31,13 @@ export const Hello = forwardRef<HTMLDivElement, HelloProps>((props, ref) => {
 
           <ContactsInfo setModalOpen={setModalOpen} />
 
-          <Box display="flex" gap={3} mt={2}>
+          <ButtonsBox>
             <Button onClick={setModalOpen}>{tc("contact me")}</Button>
             <Button variant="outlined">{tc("download cv")}</Button>
-          </Box>
+          </ButtonsBox>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box display="flex" width="100%" height="100%">
+          <ImageBox>
             <Box
               component="img"
               src="/pustovitslava.jpg"
@@ -48,7 +49,7 @@ export const Hello = forwardRef<HTMLDivElement, HelloProps>((props, ref) => {
                 width: "100%",
               }}
             />
-          </Box>
+          </ImageBox>
         </Grid>
       </Grid>
     </Section>

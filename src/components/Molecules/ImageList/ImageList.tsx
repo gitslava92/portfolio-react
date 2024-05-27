@@ -1,6 +1,5 @@
 import { getPeriod } from "@common/helpers";
 import { useCustomTranslation } from "@common/i18n";
-import { theme } from "@common/theme";
 import { Title } from "@components/Atoms/styles";
 import { Carousel } from "@components/Molecules/Carousel/Carousel";
 import { Modal } from "@components/Molecules/Modal/Modal";
@@ -13,6 +12,7 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { useTheme, Theme } from "@mui/material/styles";
 import { Box } from "@mui/system";
 import { useState } from "react";
 
@@ -23,6 +23,7 @@ interface ImageListProps {
 export const ImageList = ({ portfolio }: ImageListProps) => {
   const { tc } = useCustomTranslation();
   const [selected, setSelected] = useState<number | null>(null);
+  const theme = useTheme<Theme>();
 
   const isPhone = useMediaQuery(theme.breakpoints.down("md"));
   const isDesctop = useMediaQuery(theme.breakpoints.up("xl"));
@@ -67,9 +68,9 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
         ))}
       </MUIImageList>
 
-      {!!selected && (
+      {(!!selected || selected === 0) && (
         <Modal
-          open={Boolean(selected)}
+          open={!!selected || selected === 0}
           setClose={handleModalClose}
           maxWidth="85vw"
         >

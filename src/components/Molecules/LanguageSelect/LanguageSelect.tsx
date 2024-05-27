@@ -1,12 +1,12 @@
 import { LANGUAGE_KEY } from "@common/constants";
 import { languages } from "@common/i18n";
-import { palette } from "@common/theme";
 import { ExpandMore } from "@mui/icons-material";
 import {
   Select as MUISelect,
   MenuItem,
   SelectChangeEvent,
 } from "@mui/material";
+import { useTheme, Theme } from "@mui/material/styles";
 import { styled } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -48,6 +48,7 @@ const initialLanguage = languages[1].id;
 export const LanguageSelect = ({ isMobile }: LanguageSelectProps) => {
   const [languageId, setLanguageId] = useState<string>(initialLanguage);
   const { i18n } = useTranslation();
+  const theme = useTheme<Theme>();
 
   useEffect(() => {
     const storedLanguageId =
@@ -83,7 +84,7 @@ export const LanguageSelect = ({ isMobile }: LanguageSelectProps) => {
           value={lang.id}
           sx={{
             textTransform: "uppercase",
-            color: palette.primary.main,
+            color: theme.palette.primary.main,
           }}
         >
           {lang.title}

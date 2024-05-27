@@ -1,7 +1,7 @@
 import { CONTACTS_LINKS } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
 import { Vk } from "@components/assets/vk";
-import { LinkedIn, Twitter, GitHub } from "@mui/icons-material";
+import { LinkedIn, GitHub } from "@mui/icons-material";
 import { Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
 
@@ -37,7 +37,6 @@ const getContacts = (tc: (msg: string) => string) => {
 const socials = [
   { id: 0, link: "https://www.linkedin.com", icon: LinkedIn },
   { id: 1, link: "https://vk.com/webslava92", icon: Vk },
-  { id: 2, link: "https://twitter.com/", icon: Twitter },
   { id: 3, link: "https://github.com/gitslava92", icon: GitHub },
 ];
 

@@ -29,13 +29,13 @@ const sections = [
   },
   {
     id: 1,
-    value: "freelance",
-    title: "freelance",
+    value: "teamWork",
+    title: "team work",
   },
   {
     id: 2,
-    value: "teamWork",
-    title: "team work",
+    value: "freelance",
+    title: "freelance",
   },
   {
     id: 3,
@@ -47,6 +47,24 @@ const sections = [
 const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
   return [
     {
+      id: 0,
+      title: tc("marketplace"),
+      section: "teamWork",
+      period: ["present"],
+      sectionTitle: tc("team work"),
+      subtitle: tc(
+        "a marketplace where buyers and sellers can safely make transactions."
+      ),
+      stack:
+        "HTML, SCSS, Javascript, Typescript, React, React-Router, Graphql, Apollo, MUI",
+      img: [
+        "./portfolio/profital/profital-1.jpg",
+        "./portfolio/profital/profital-2.jpg",
+        "./portfolio/profital/profital-3.jpg",
+      ],
+      link: "https://profital.io",
+    },
+    {
       id: 1,
       title: tc("building company “GRANDSTROY”"),
       section: "freelance",
@@ -55,7 +73,8 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       subtitle: tc(
         "“GRANDSTROY” company is engaged in construction and repair."
       ),
-      stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
+      stack:
+        "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router, Redux-ToolKit",
       img: [
         "./portfolio/grand-stroy/grand-stroy-1.jpg",
         "./portfolio/grand-stroy/grand-stroy-2.jpg",
@@ -89,7 +108,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
       subtitle: tc(
         "“KAMOZA A.I.” company is engaged in construction and repair."
       ),
-      stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
+      stack: "HTML, SCSS, Javascript, Vue, Vue-router, Vuetify",
       img: [
         "./portfolio/kamoza/kamoza-1.jpg",
         "./portfolio/kamoza/kamoza-2.jpg",
@@ -99,33 +118,25 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
     },
     {
       id: 4,
-      title: tc("marketplace “PROFITAL”"),
-      section: "teamWork",
-      period: ["2023-04-01T00:00:00Z"],
-      sectionTitle: tc("team work"),
-      subtitle: tc(
-        "a marketplace “PROFITAL” where buyers and sellers can safely make transactions."
-      ),
-      stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
-      img: [
-        "./portfolio/profital/profital-1.jpg",
-        "./portfolio/profital/profital-2.jpg",
-        "./portfolio/profital/profital-3.jpg",
-      ],
-      link: "https://profital.io",
-    },
-    {
-      id: 5,
-      title: tc("electron.js app “CSV EDITOR”"),
+      title: tc("electron.js app “CSV-EDITOR”"),
       section: "petProject",
       period: ["2023-04-01T00:00:00Z"],
       sectionTitle: tc("pet projects"),
-      subtitle: tc("“Profital” company is engaged in construction and repair."),
-      stack: "HTML, SCSS, React, Javascript, Typescript, MUI, React-Router",
+      subtitle: tc(
+        '"CSV-editor" is an application for quickly checking and editing data in csv files'
+      ),
+      stack: "Electron, HTML, SCSS, React, Javascript, Typescript, MUI",
       img: [
-        "./portfolio/profital/profital-1.jpg",
-        "./portfolio/profital/profital-2.jpg",
-        "./portfolio/profital/profital-3.jpg",
+        "./portfolio/csv-editor/csv-editor-1.jpg",
+        "./portfolio/csv-editor/csv-editor-2.jpg",
+        "./portfolio/csv-editor/csv-editor-3.jpg",
+        "./portfolio/csv-editor/csv-editor-4.jpg",
+        "./portfolio/csv-editor/csv-editor-5.jpg",
+        "./portfolio/csv-editor/csv-editor-6.jpg",
+        "./portfolio/csv-editor/csv-editor-7.jpg",
+        "./portfolio/csv-editor/csv-editor-8.jpg",
+        "./portfolio/csv-editor/csv-editor-9.jpg",
+        "./portfolio/csv-editor/csv-editor-10.jpg",
       ],
       link: "https://profital.io",
     },

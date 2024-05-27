@@ -34,7 +34,7 @@ export const en = {
 
       // Experiense
       present: "present",
-      sourсe: "sourсe",
+      "sourсe, ltd": "sourсe, ltd",
       "my love of programming and active participation in a large startup project allowed me to gain a lot of experience in a short time.":
         "my love of programming and active participation in a large startup project allowed me to gain a lot of experience in a short time.",
       "copying (creating templates) and layout of html, css, js, jquery sites, code and content optimization":
@@ -68,10 +68,12 @@ export const en = {
       "building company “KAMOZA A.I.”": "building company “KAMOZA A.I.”",
       "“KAMOZA A.I.” company is engaged in construction and repair.":
         "“KAMOZA A.I.” company is engaged in construction and repair.",
-      "marketplace “PROFITAL”": "marketplace “PROFITAL”",
-      "a marketplace “PROFITAL” where buyers and sellers can safely make transactions.":
-        "a marketplace “PROFITAL” where buyers and sellers can safely make transactions.",
-      "electron.js app “CSV EDITOR”": "electron.js app “CSV EDITOR”",
+      "marketplace": "marketplace",
+      "a marketplace where buyers and sellers can safely make transactions.":
+        "a marketplace where buyers and sellers can safely make transactions.",
+      "electron.js app “CSV-EDITOR”": "electron.js app “CSV-EDITOR”",
+      '"CSV-editor" is an application for quickly checking and editing data in csv files':
+        '"CSV-editor" is an application for quickly checking and editing data in csv files',
 
       // Feedback
       "Mihail Boyko": "Mihail Boyko",
@@ -99,6 +101,12 @@ export const en = {
       // Contact
       "are you working on something great?! i would love to help make it happen! drop me a letter and start your project right now! just do it.":
         "are you working on something great?! i would love to help make it happen! drop me a letter and start your project right now! just do it.",
+
+      // SpeedDeal
+      "toggle language to": "toggle language to",
+      "toggle theme to": "toggle theme to",
+      english: "english",
+      russian: "russian",
     },
   },
 };

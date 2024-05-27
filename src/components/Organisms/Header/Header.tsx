@@ -1,6 +1,5 @@
 import { UI } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
-import { palette } from "@common/theme";
 import { LanguageSelect } from "@components/Molecules/LanguageSelect/LanguageSelect";
 import {
   DraverBox,
@@ -21,6 +20,7 @@ import {
   ListItemButton,
   ListItemText,
 } from "@mui/material";
+import { useTheme, Theme } from "@mui/material/styles";
 import { Box, Container } from "@mui/system";
 import { Ref, RefObject, forwardRef, useState } from "react";
 
@@ -36,6 +36,7 @@ interface HeaderProps {
 export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
   const { menuItems, refs, window, id } = props;
   const { tc } = useCustomTranslation();
+  const theme = useTheme<Theme>();
 
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -56,7 +57,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
 
   const drawer = (
     <DraverRootBox onClick={handleDrawerToggle}>
-      <Logo color={palette.primary.main} />
+      <Logo color={theme.palette.primary.main} />
       <Divider />
       <List>
         {menuItems.map((item) => (
@@ -78,7 +79,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
       <AppBar component="nav" ref={ref} color="secondary">
         <Container>
           <Toolbar>
-            <Logo color={palette.primary.main} />
+            <Logo color={theme.palette.primary.main} />
             <IconButton
               color="inherit"
               aria-label="open drawer"
