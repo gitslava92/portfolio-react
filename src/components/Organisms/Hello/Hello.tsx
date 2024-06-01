@@ -1,10 +1,12 @@
-import { useCustomTranslation } from "@common/i18n";
+import { PATHS } from "@common/constants";
+import { LangTitle, useCustomTranslation } from "@common/i18n";
 import { Section } from "@components/Atoms/styles";
 import { ContactsInfo } from "@components/Molecules/ContactsInfo/ContactsInfo";
 import { ButtonsBox, ImageBox } from "@components/Organisms/Hello/Hello.styles";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography, Link } from "@mui/material";
 import { Box } from "@mui/system";
 import { forwardRef } from "react";
+import { useTranslation } from "react-i18next";
 
 interface HelloProps {
   id?: string;
@@ -13,6 +15,7 @@ interface HelloProps {
 
 export const Hello = forwardRef<HTMLDivElement, HelloProps>((props, ref) => {
   const { id, setModalOpen } = props;
+  const { i18n } = useTranslation();
   const { tc, tca } = useCustomTranslation();
 
   return (
@@ -33,7 +36,17 @@ export const Hello = forwardRef<HTMLDivElement, HelloProps>((props, ref) => {
 
           <ButtonsBox>
             <Button onClick={setModalOpen}>{tc("contact me")}</Button>
-            <Button variant="outlined">{tc("download cv")}</Button>
+            <Button
+              component={Link}
+              variant="outlined"
+              href={`/${
+                i18n.language === LangTitle.Eng ? PATHS.CV_EN : PATHS.CV_RU
+              }`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {tc("download cv")}
+            </Button>
           </ButtonsBox>
         </Grid>
         <Grid item xs={12} md={6}>

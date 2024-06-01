@@ -9,7 +9,7 @@ import { useState, useEffect, useContext } from "react";
 import { useTranslation } from "react-i18next";
 
 enum ActionType {
-  Language = "langiage",
+  Language = "language",
   Theme = "theme",
 }
 

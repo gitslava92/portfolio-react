@@ -1,5 +1,7 @@
 export enum PATHS {
   HOME = "/",
+  CV_EN = 'pustovit-slava-cv-en.pdf',
+  CV_RU = 'pustovit-slava-cv-ru.pdf',
 }
 
 export enum CONTACTS_LINKS {
