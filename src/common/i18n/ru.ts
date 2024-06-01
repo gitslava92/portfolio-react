@@ -1,7 +1,7 @@
 export const ru = {
   ru: {
     translation: {
-      "Pustovit Viacheslav (frontend web developer)": "Вячеслав Пустовит (frontend web developer)",
+      "Pustovit Viacheslav (frontend developer)": "Вячеслав Пустовит (frontend developer)",
       hello: "обо мне",
       skills: "навыки",
       experience: "опыт",
