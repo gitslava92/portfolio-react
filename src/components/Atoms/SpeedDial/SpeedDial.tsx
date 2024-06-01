@@ -56,6 +56,11 @@ export const SpeedDial = () => {
     }
   }, [i18n, languageId]);
 
+  useEffect(() => {
+    document.documentElement.lang = languageId;
+    document.title = tc("Pustovit Viacheslav (frontend developer)");
+  }, [languageId, tc]);
+
   const toggleLanguage = () => {
     setLanguageId((prev) => {
       const newLanguage =

@@ -3,7 +3,6 @@ import { useCustomTranslation } from "@common/i18n";
 import { SpeedDial } from "@components/Atoms/SpeedDial/SpeedDial";
 import { ContactForm } from "@components/Molecules/ContactForm/ContactForm";
 import { Modal } from "@components/Molecules/Modal/Modal";
-import { TitleComponent } from "@components/Molecules/TitleComponent/TitleComponent";
 import { Contact } from "@components/Organisms/Contact/Contact";
 import { Education } from "@components/Organisms/Education/Education";
 import { Experience } from "@components/Organisms/Experience/Experience";
@@ -55,7 +54,6 @@ export const LandingPage = () => {
         sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
       >
         <CssBaseline />
-        <TitleComponent />
         <Header menuItems={menuItems} refs={refs} id="header" />
         <Toolbar />
         <Container>

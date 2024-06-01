@@ -1,7 +1,7 @@
 export const en = {
   en: {
     translation: {
-      "Pustovit Viacheslav (frontend web developer)": "Pustovit Viacheslav (frontend web developer)",
+      "Pustovit Viacheslav (frontend developer)": "Pustovit Viacheslav (frontend developer)",
       hello: "hello",
       skills: "skills",
       experience: "experience",
