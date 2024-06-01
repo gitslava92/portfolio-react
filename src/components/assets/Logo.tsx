@@ -1,9 +1,9 @@
 import { useMediaQuery } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useTheme, Theme } from "@mui/material/styles";
-import React from "react";
+import { SVGProps } from "react";
 
-interface LogoIconProps extends React.SVGProps<SVGSVGElement> {
+interface LogoIconProps extends SVGProps<SVGSVGElement> {
   color?: string;
   width?: number;
   height?: number;

@@ -34,7 +34,6 @@ export const ContactForm = ({
   });
 
   const onSubmit = async (data: FieldValues<typeof defaultValues>) => {
-    console.log("data", data);
     try {
       const response = await fetch(EMAIL_URL, {
         method: "POST",

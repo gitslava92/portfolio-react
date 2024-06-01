@@ -1,4 +1,4 @@
-import { UI } from "@common/constants";
+import { LANDING_SECTIONS, UI } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
 import { LanguageSelect } from "@components/Molecules/LanguageSelect/LanguageSelect";
 import {
@@ -57,7 +57,9 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
 
   const drawer = (
     <DraverRootBox onClick={handleDrawerToggle}>
-      <Logo color={theme.palette.primary.main} />
+      <Box onClick={() => handleMenuItemClick(LANDING_SECTIONS.Hello)}>
+        <Logo color={theme.palette.primary.main} />
+      </Box>
       <Divider />
       <List>
         {menuItems.map((item) => (
@@ -79,7 +81,9 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
       <AppBar component="nav" ref={ref} color="secondary">
         <Container>
           <Toolbar>
-            <Logo color={theme.palette.primary.main} />
+            <Box onClick={() => handleMenuItemClick(LANDING_SECTIONS.Hello)}>
+              <Logo color={theme.palette.primary.main} />
+            </Box>
             <IconButton
               color="inherit"
               aria-label="open drawer"
