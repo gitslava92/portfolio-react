@@ -39,24 +39,32 @@ export const ContactForm = ({
   const onErrorClose = () => {
     setMessage("");
     setModalClose();
-  }
+  };
 
   const onSubmit = async (data: FieldValues<typeof defaultValues>) => {
     e.preventDefault();
 
     try {
       const response = await fetch(EMAIL_URL, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       });
 
       const result = await response.json();
       setMessage(result.message);
+
+      setTimeout(() => {
+        onErrorClose();
+      }, 2000);
     } catch (error) {
-      setMessage('something went wrong. try again later');
+      setMessage("something went wrong. try again later");
+
+      setTimeout(() => {
+        onErrorClose();
+      }, 2000);
     }
   };
 
