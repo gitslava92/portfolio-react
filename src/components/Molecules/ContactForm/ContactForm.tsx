@@ -48,17 +48,17 @@ export const ContactForm = ({
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(data)
       });
 
       const result = await response.json();
-      setMessage(result.message);
+      setMessage(tca(result.message || '', '. '));
 
       setTimeout(() => {
         onErrorClose();
       }, 2000);
     } catch (error) {
-      setMessage("something went wrong. try again later");
+      setMessage(tca("something went wrong. try again later", '. '));
 
       setTimeout(() => {
         onErrorClose();
