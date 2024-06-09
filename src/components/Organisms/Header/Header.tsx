@@ -1,10 +1,12 @@
 import { LANDING_SECTIONS, UI } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
-import { LanguageSelect } from "@components/Molecules/LanguageSelect/LanguageSelect";
 import {
-  DraverBox,
-  DraverRootBox,
+  Drawer,
+  DrawerBox,
+  DrawerRootBox,
   Toolbar,
+  IconButton,
+  MenuItemsBox
 } from "@components/Organisms/Header/Header.styles";
 import { MenuItemType } from "@components/Pages/LandingPage/LandingPage";
 import { Logo } from "@components/assets/Logo";
@@ -13,12 +15,10 @@ import {
   AppBar,
   Button,
   Divider,
-  Drawer,
-  IconButton,
   List,
   ListItem,
   ListItemButton,
-  ListItemText,
+  ListItemText
 } from "@mui/material";
 import { useTheme, Theme } from "@mui/material/styles";
 import { Box, Container } from "@mui/system";
@@ -51,12 +51,12 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
     const ref = refs[id] as RefObject<HTMLDivElement>;
     ref.current?.scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "start"
     });
   };
 
   const drawer = (
-    <DraverRootBox onClick={handleDrawerToggle}>
+    <DrawerRootBox onClick={handleDrawerToggle}>
       <Box onClick={() => handleMenuItemClick(LANDING_SECTIONS.Hello)}>
         <Logo color={theme.palette.primary.main} />
       </Box>
@@ -73,7 +73,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
           </ListItem>
         ))}
       </List>
-    </DraverRootBox>
+    </DrawerRootBox>
   );
 
   return (
@@ -89,11 +89,10 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
               aria-label="open drawer"
               edge="start"
               onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { md: "none" } }}
             >
               <Menu color="primary" />
             </IconButton>
-            <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <MenuItemsBox>
               {menuItems.map((item) => (
                 <Button
                   variant="text"
@@ -103,7 +102,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
                   {tc(item.title)}
                 </Button>
               ))}
-            </Box>
+            </MenuItemsBox>
           </Toolbar>
         </Container>
       </AppBar>
@@ -114,20 +113,12 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true,
-          }}
-          sx={{
-            display: { xs: "block", md: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: UI.DrawerWidth,
-            },
+            keepMounted: true
           }}
         >
-          <DraverBox>
+          <DrawerBox>
             {drawer}
-            <LanguageSelect isMobile />
-          </DraverBox>
+          </DrawerBox>
         </Drawer>
       </nav>
     </Box>

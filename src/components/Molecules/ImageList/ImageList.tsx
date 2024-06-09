@@ -28,10 +28,10 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
   const theme = useTheme<Theme>();
 
   const isPhone = useMediaQuery(theme.breakpoints.down("md"));
-  const isDesctop = useMediaQuery(theme.breakpoints.up("xl"));
+  const isDesktop = useMediaQuery(theme.breakpoints.up("xl"));
 
   const getCols = () => {
-    if (isDesctop) {
+    if (isDesktop) {
       return 4;
     }
     if (isPhone) {

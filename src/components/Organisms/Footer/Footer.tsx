@@ -18,7 +18,7 @@ export const Footer = forwardRef<HTMLDivElement, FooterProps>((props, ref) => {
       component="footer"
       ref={ref}
       id={id}
-      sx={{ backgroundColor: theme.palette.background.primary, p: 2 }}
+      sx={{ backgroundColor: theme.palette.background.default, p: 2 }}
     >
       <Typography variant="body1" color="primary" textAlign="center">{`${tc(
         "copyrights"

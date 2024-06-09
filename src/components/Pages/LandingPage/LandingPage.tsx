@@ -14,8 +14,12 @@ import { Portfolio } from "@components/Organisms/Portfolio/Portfolio";
 import { Skills } from "@components/Organisms/Skills/Skills";
 import { getMenuItems } from "@components/Pages/LandingPage/LandingPage.helpers";
 import { CssBaseline, Divider, Toolbar } from "@mui/material";
-import { Box, Container } from "@mui/system";
+import { Box, Container, styled } from "@mui/system";
 import { Ref, createRef, useState } from "react";
+
+export const RootBox = styled(Box)({
+  display: "flex", flexDirection: "column", minHeight: "100vh"
+});
 
 export interface MenuItemType {
   id: number;
@@ -30,7 +34,7 @@ const visibleSections = [
   LANDING_SECTIONS.Education,
   LANDING_SECTIONS.Portfolio,
   LANDING_SECTIONS.Feedback,
-  LANDING_SECTIONS.Contact,
+  LANDING_SECTIONS.Contact
 ];
 
 export const LandingPage = () => {
@@ -50,9 +54,7 @@ export const LandingPage = () => {
 
   return (
     <>
-      <Box
-        sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-      >
+      <RootBox>
         <CssBaseline />
         <Header menuItems={menuItems} refs={refs} id="header" />
         <Toolbar />
@@ -75,7 +77,7 @@ export const LandingPage = () => {
           </Box>
         </Container>
         <Footer id="footer" />
-      </Box>
+      </RootBox>
       {isModal && (
         <Modal open={isModal} setClose={handleModalClose}>
           <ContactForm setModalClose={handleModalClose} isModalMode />

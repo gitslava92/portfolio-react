@@ -62,7 +62,7 @@ export const ru = {
       date: "дата",
       "building company “GRANDSTROY”": "строительная компания “ГРАНДСТРОЙ”",
       "“GRANDSTROY” company is engaged in construction and repair.":
-        'компания "ГРАНДСТРОЙ" занимается строительством и ремонтом.',
+        "компания \"ГРАНДСТРОЙ\" занимается строительством и ремонтом.",
       "building company “UMS-STROY”": "строительная компания “ЮМС-СТРОЙ”",
       "“UMS-STROY” company is engaged in construction and repair.":
         "компания “ЮМС-СТРОЙ” занимается строительством и ремонтом.",
@@ -74,27 +74,27 @@ export const ru = {
         "торговая площадка, где покупатели и продавцы могут безопасно совершать сделки",
       "electron.js app “CSV-EDITOR”":
         "приложение на electron.js “CSV-РЕДАКТОР”",
-      '"CSV-editor" is an application for quickly checking and editing data in csv files':
-        '"CSV-редактор" это приложение для быстрой проверки и редактирования данных в csv файлах',
+      "\"CSV-editor\" is an application for quickly checking and editing data in csv files":
+        "\"CSV-редактор\" это приложение для быстрой проверки и редактирования данных в csv файлах",
       "visit website": "посетить веб-сайт",
-      "back to cv": 'вернуться к резюме',
+      "back to cv": "вернуться к резюме",
 
       // Feedback
       "Mihail Boyko": "Михаил Бойко",
       "director building company “UMS-STROY”":
-        'директор строительной компании "ЮМС-СТРОЙ"',
+        "директор строительной компании \"ЮМС-СТРОЙ\"",
       "i got exactly what I wanted and in a short time. They are very attentive and comfortable in communication. it was a pleasure to do business.":
         "получил именно то что хотел и в короткий срок. очень внимательные и комфортный в общении. было приятно иметь дело.",
 
       "Dmitriy Kuhar": "Дмитрий Кухарь",
       "director building company “GRANDSTROY”":
-        'директор строительной компании "ГРАНДСТРОЙ"',
+        "директор строительной компании \"ГРАНДСТРОЙ\"",
       "the site was developed quickly and exactly as I had planned. communication is at the highest level. great job!":
         "сайт разработал быстро и именно таким, как я и планировал. коммуникация на высшем уровне. отличная работа!",
 
       "Aleksandr Kamoza": "Александр Камоза",
       "director building company “KAMOZA A.I.”":
-        'директор строительной компании "КАМОЗА А.И."',
+        "директор строительной компании \"КАМОЗА А.И.\"",
       "a landing page with examples of work was urgently needed. i turned to Slava and he helped. everything is wonderful!":
         "срочно был нужен лендинг с примерами работ. обратился к Славе и он помог. все замечательно!",
 
@@ -105,12 +105,14 @@ export const ru = {
       // Contact
       "are you working on something great?! i would love to help make it happen! drop me a letter and start your project right now! just do it.":
         "Вы работаете над чем-то грандиозным?! я бы с удовольствием помог воплотить это в жизнь! Напишите мне письмо прямо сейчас.",
+      "something went wrong. try again later": "что-то пошло не так. попробуйте позже",
+      "the email has been sent successfully. i will try to answer as soon as possible": "письмо успешно отправлено. постараюсь ответить как можно быстрее",
 
       // SpeedDeal
       "toggle language to": "переключить язык на",
       "toggle theme to": "toggle theme to",
       english: "английский",
-      russian: 'русский',
-    },
-  },
+      russian: "русский"
+    }
+  }
 };

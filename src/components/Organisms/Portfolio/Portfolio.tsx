@@ -61,6 +61,7 @@ const getPortfolio = (tc: (msg: string) => string): PortfolioItem[] => {
         "./portfolio/profital/profital-1.jpg",
         "./portfolio/profital/profital-2.jpg",
         "./portfolio/profital/profital-3.jpg",
+        "./portfolio/profital/profital-4.jpg",
       ],
       link: "https://profital.io",
     },

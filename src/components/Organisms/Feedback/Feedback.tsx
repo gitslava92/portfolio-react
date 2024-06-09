@@ -3,12 +3,13 @@ import { ItemTitle, Section, Title } from "@components/Atoms/styles";
 import { Avatar, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { forwardRef } from "react";
+import { NameBox } from "@components/Organisms/Feedback/Feedback.styles";
 
 interface FeedbackProps {
   id?: string;
 }
 
-const аeedbacks = [
+const feedbacks = [
   {
     id: 0,
     name: "Mihail Boyko",
@@ -52,24 +53,19 @@ export const Feedback = forwardRef<HTMLDivElement, FeedbackProps>(
           </Grid>
           <Grid item xs={12} md={8}>
             <Grid container spacing={2}>
-              {аeedbacks.map((feedback) => (
+              {feedbacks.map((feedback) => (
                 <Grid item xs={12} key={feedback.id}>
                   <Box display="flex" gap={4}>
                     <Box>
                       <Avatar></Avatar>
                     </Box>
                     <Box>
-                      <Box
-                        display="flex"
-                        gap={2}
-                        flexDirection={{ xs: "column", md: "row" }}
-                        mb={{ xs: 1, md: 0 }}
-                      >
+                      <NameBox>
                         <ItemTitle variant="h4">{tc(feedback.name)}</ItemTitle>
                         <Typography variant="subtitle2">
                           {tc(feedback.post)}
                         </Typography>
-                      </Box>
+                      </NameBox>
 
                       <Typography variant="body1">
                         {tca(feedback.text, ". ")}

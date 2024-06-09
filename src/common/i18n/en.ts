@@ -104,6 +104,8 @@ export const en = {
       // Contact
       "are you working on something great?! i would love to help make it happen! drop me a letter and start your project right now! just do it.":
         "are you working on something great?! i would love to help make it happen! drop me a letter and start your project right now! just do it.",
+      'something went wrong. try again later': 'something went wrong. try again later',
+      'the email has been sent successfully. i will try to answer as soon as possible': 'the email has been sent successfully. i will try to answer as soon as possible',
 
       // SpeedDeal
       "toggle language to": "toggle language to",

@@ -1,3 +1,4 @@
+import { PaletteMode } from "@mui/material";
 import { ThemeOptions } from "@mui/material/styles";
 
 export const getPalette = (mode: PaletteMode) => ({
