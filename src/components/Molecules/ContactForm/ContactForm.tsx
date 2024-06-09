@@ -45,7 +45,7 @@ export const ContactForm = ({
     e.preventDefault();
 
     try {
-      const response = await fetch('http://webslava92.ru/send_email.php', {
+      const response = await fetch(EMAIL_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
