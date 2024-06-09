@@ -42,8 +42,6 @@ export const ContactForm = ({
   };
 
   const onSubmit = async (data: FieldValues<typeof defaultValues>) => {
-    e.preventDefault();
-
     try {
       const response = await fetch(EMAIL_URL, {
         method: "POST",
