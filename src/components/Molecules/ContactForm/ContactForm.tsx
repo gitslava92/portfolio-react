@@ -20,8 +20,6 @@ const defaultValues = {
   message: ""
 };
 
-const EMAIL_URL = "https://formsubmit.co/webslava92@gmail.com";
-
 export const ContactForm = ({
                               setModalClose,
                               isModalMode
@@ -38,23 +36,27 @@ export const ContactForm = ({
     defaultValues
   });
 
+  const onErrorClose = () => {
+    setMessage("");
+    setModalClose();
+  }
+
   const onSubmit = async (data: FieldValues<typeof defaultValues>) => {
+    e.preventDefault();
+
     try {
-      const response = await fetch(EMAIL_URL, {
-        method: "POST",
+      const response = await fetch('http://webslava92.ru/send_email.php', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
+          'Content-Type': 'application/json',
         },
-        body: new URLSearchParams(data)
+        body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
-        setMessage("The email has been sent successfully. I will try to answer as soon as possible.");
-      } else {
-        setMessage("Something went wrong. Try again later.");
-      }
+      const result = await response.json();
+      setMessage(result.message);
     } catch (error) {
-      setMessage("Something went wrong. Try again later.");
+      setMessage('something went wrong. try again later');
     }
   };
 
@@ -125,7 +127,7 @@ export const ContactForm = ({
       </Grid>
 
       {!!message && (
-        <Modal open={!!message} setClose={() => setMessage("")}>{message}</Modal>
+        <Modal open={!!message} setClose={onErrorClose}>{message}</Modal>
       )}
     </>
   );

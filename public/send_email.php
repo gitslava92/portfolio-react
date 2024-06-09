@@ -1,20 +1,25 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+    $data = json_decode(file_get_contents("php://input"), true);
 
-    $to = 'webslava92@gmail.com';
-    $subject = "Message from $name (webslava92.ru)";
-    $body = "Name: $name\nEmail: $email\n\n$message";
-    $headers = "From: $email";
+    $name = $data['name'];
+    $email = $data['email'];
+    $message = $data['message'];
+
+    $to = "webslava92@gmail.com";
+    $subject = "Message from webslava92.ru";
+    $body = "Имя: $name\nEmail: $email\nMessage:\n$message";
+    $headers = "From: webslava92@gmail.com";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "Email sent successfully!";
+        http_response_code(200);
+        echo json_encode(["message" => "the email has been sent successfully. i will try to answer as soon as possible"]);
     } else {
-        echo "Failed to send email.";
+        http_response_code(500);
+        echo json_encode(["message" => "Не удалось отправить сообщение. Попробуйте позже."]);
     }
 } else {
-    echo "Invalid request method.";
+    http_response_code(405);
+    echo json_encode(["message" => "something went wrong. try again later"]);
 }
 ?>

@@ -1,4 +1,4 @@
-import { LANDING_SECTIONS, UI } from "@common/constants";
+import { LANDING_SECTIONS } from "@common/constants";
 import { useCustomTranslation } from "@common/i18n";
 import {
   Drawer,

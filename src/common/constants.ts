@@ -48,4 +48,4 @@ export enum UI {
 
 export const LANGUAGE_KEY = "language";
 
-export const EMAIL_URL = 'https://webslava92.ru/send_email.php';
+export const EMAIL_URL = 'http://webslava92.ru/send_email.php';
