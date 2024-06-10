@@ -14,6 +14,7 @@ body {
   --light-components-button-large-size: 15px;
 
   /* Colors */
+  --primary-main: '#1fa4c4';
   --main-colors-white: #fff;
   --color-slategray: #687588;
   --color-mediumseagreen: #0caf60;
@@ -54,4 +55,12 @@ body {
 *::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  color: var(--primary-main);
 }

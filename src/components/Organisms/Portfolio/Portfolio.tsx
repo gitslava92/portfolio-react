@@ -2,8 +2,8 @@ import { useCustomTranslation } from "@common/i18n";
 import { Section, Title } from "@components/Atoms/styles";
 import { ImageList } from "@components/Molecules/ImageList/ImageList";
 import { Button } from "@mui/material";
-import { Box } from "@mui/system";
 import { forwardRef, useState } from "react";
+import { ImagesListBox } from "@components/Organisms/Portfolio/Portfolio.styles";
 
 export interface PortfolioItem {
   id: number;
@@ -163,7 +163,7 @@ export const Portfolio = forwardRef<HTMLDivElement, PortfolioProps>(
         <Title variant="h2" sx={{ marginBottom: 1 }}>
           {tc("portfolio")}
         </Title>
-        <Box display="flex" gap={{ xs: 1, md: 3 }} mb={1} flexWrap="wrap">
+        <ImagesListBox>
           {sections.map((section) => (
             <Button
               variant="text"
@@ -173,7 +173,7 @@ export const Portfolio = forwardRef<HTMLDivElement, PortfolioProps>(
               {tc(section.title)}
             </Button>
           ))}
-        </Box>
+        </ImagesListBox>
         <ImageList portfolio={portfolio} />
       </Section>
     );

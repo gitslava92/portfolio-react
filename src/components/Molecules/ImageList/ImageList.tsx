@@ -75,6 +75,7 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
           open={!!selected || selected === 0}
           setClose={handleModalClose}
           maxWidth="85vw"
+          maxHeight="auto"
         >
           <Box display="flex" justifyContent="space-between" gap={1}>
             <Title variant="h2" sx={{ marginBottom: 1 }}>

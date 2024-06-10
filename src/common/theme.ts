@@ -6,7 +6,7 @@ export const getPalette = (mode: PaletteMode) => ({
   ...(mode === "light"
     ? {
         primary: {
-          main: "#1fa4c4",
+          main: 'var(--primary-main)',
           contrastText: "#FFFFFF",
         },
         secondary: {
