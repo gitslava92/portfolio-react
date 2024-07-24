@@ -3,11 +3,11 @@ import { useCustomTranslation } from "@common/i18n";
 import { rules } from "@common/validation";
 import { FormInput } from "@components/Atoms/FormInput/FormInput";
 import { Title } from "@components/Atoms/styles";
+import { Modal } from "@components/Molecules/Modal/Modal";
 import { Grid, Typography, Button } from "@mui/material";
 import { Box } from "@mui/system";
-import { FieldValues, useForm } from "react-hook-form";
 import { useState } from "react";
-import { Modal } from "@components/Molecules/Modal/Modal";
+import { FieldValues, useForm } from "react-hook-form";
 
 interface ContactFormProps {
   setModalClose?: () => void;
@@ -17,23 +17,23 @@ interface ContactFormProps {
 const defaultValues = {
   name: "",
   email: "",
-  message: ""
+  message: "",
 };
 
 export const ContactForm = ({
-                              setModalClose,
-                              isModalMode
-                            }: ContactFormProps) => {
+  setModalClose,
+  isModalMode,
+}: ContactFormProps) => {
   const { tc, tca } = useCustomTranslation();
   const [message, setMessage] = useState("");
 
   const {
     control,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm({
     mode: "onBlur",
-    defaultValues
+    defaultValues,
   });
 
   const onErrorClose = () => {
@@ -46,19 +46,19 @@ export const ContactForm = ({
       const response = await fetch(EMAIL_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       });
 
       const result = await response.json();
-      setMessage(tca(result.message || '', '. '));
+      setMessage(tca(result.message || "", ". "));
 
       setTimeout(() => {
         onErrorClose();
       }, 2000);
     } catch (error) {
-      setMessage(tca("something went wrong. try again later", '. '));
+      setMessage(tca("something went wrong. try again later", ". "));
 
       setTimeout(() => {
         onErrorClose();
@@ -133,7 +133,9 @@ export const ContactForm = ({
       </Grid>
 
       {!!message && (
-        <Modal open={!!message} setClose={onErrorClose}>{message}</Modal>
+        <Modal open={!!message} setClose={onErrorClose}>
+          {message}
+        </Modal>
       )}
     </>
   );

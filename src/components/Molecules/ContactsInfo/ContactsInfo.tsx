@@ -35,9 +35,13 @@ const getContacts = (tc: (msg: string) => string) => {
 };
 
 const socials = [
-  { id: 0, link: "https://www.linkedin.com", icon: LinkedIn },
-  { id: 1, link: "https://vk.com/webslava92", icon: Vk },
-  { id: 3, link: "https://github.com/gitslava92", icon: GitHub },
+  { id: 0, link: "https://vk.com/webslava92", icon: Vk },
+  { id: 1, link: "https://github.com/gitslava92", icon: GitHub },
+  {
+    id: 2,
+    link: "https://www.linkedin.com/in/vyacheslav-pustovit-425bbb313",
+    icon: LinkedIn,
+  },
 ];
 
 interface ContactsInfoProps {

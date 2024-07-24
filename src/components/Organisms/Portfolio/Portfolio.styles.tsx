@@ -4,7 +4,7 @@ export const ImagesListBox = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: 'center',
   flexWrap: "wrap",
-  gap: theme.spacing(3),
+  gap: theme.spacing(1),
   marginBottom: theme.spacing(1),
   marginTop: theme.spacing(2),
   height: '100%',

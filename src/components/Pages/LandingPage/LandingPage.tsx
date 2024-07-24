@@ -18,7 +18,9 @@ import { Box, Container, styled } from "@mui/system";
 import { Ref, createRef, useState } from "react";
 
 export const RootBox = styled(Box)({
-  display: "flex", flexDirection: "column", minHeight: "100vh"
+  display: "flex",
+  flexDirection: "column",
+  minHeight: "100vh",
 });
 
 export interface MenuItemType {
@@ -34,7 +36,7 @@ const visibleSections = [
   LANDING_SECTIONS.Education,
   LANDING_SECTIONS.Portfolio,
   LANDING_SECTIONS.Feedback,
-  LANDING_SECTIONS.Contact
+  LANDING_SECTIONS.Contact,
 ];
 
 export const LandingPage = () => {

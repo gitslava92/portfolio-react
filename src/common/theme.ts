@@ -1,12 +1,12 @@
-import { PaletteMode } from "@mui/material";
+import { PaletteMode, PaletteOptions } from "@mui/material";
 import { ThemeOptions } from "@mui/material/styles";
 
-export const getPalette = (mode: PaletteMode) => ({
+export const getPalette = (mode: PaletteMode): PaletteOptions => ({
   mode,
   ...(mode === "light"
     ? {
         primary: {
-          main: 'var(--primary-main)',
+          main: '#1fa4c4',
           contrastText: "#FFFFFF",
         },
         secondary: {
@@ -16,7 +16,7 @@ export const getPalette = (mode: PaletteMode) => ({
         },
         text: {
           primary: "#1B2632",
-          secondary: "#323B49",
+          secondary: "#959595FF",
         },
         background: {
           default: "#EFEFEF",
@@ -39,6 +39,7 @@ export const getPalette = (mode: PaletteMode) => ({
         },
         text: {
           primary: "#ffffff",
+          secondary: '#959595FF'
         },
         background: {
           default: "#2c2c2c",
@@ -50,7 +51,7 @@ export const getPalette = (mode: PaletteMode) => ({
       }),
 });
 
-export const getTheme: ThemeOptions = (mode: PaletteMode) => {
+export const getTheme = (mode: PaletteMode): ThemeOptions => {
   const palette = getPalette(mode);
 
   return {
@@ -129,7 +130,7 @@ export const getTheme: ThemeOptions = (mode: PaletteMode) => {
         },
       },
       body2: {
-        color: palette.text.primary,
+        color: palette.text.secondary,
         fontSize: "14px",
         "@media (max-width:900px)": {
           fontSize: "12px",

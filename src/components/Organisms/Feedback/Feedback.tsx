@@ -1,9 +1,9 @@
 import { useCustomTranslation } from "@common/i18n";
 import { ItemTitle, Section, Title } from "@components/Atoms/styles";
+import { NameBox } from "@components/Organisms/Feedback/Feedback.styles";
 import { Avatar, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { forwardRef } from "react";
-import { NameBox } from "@components/Organisms/Feedback/Feedback.styles";
 
 interface FeedbackProps {
   id?: string;
@@ -13,22 +13,22 @@ const feedbacks = [
   {
     id: 0,
     name: "Mihail Boyko",
-    post: "director building company “UMS-STROY”",
-    text: "i got exactly what I wanted and in a short time. They are very attentive and comfortable in communication. it was a pleasure to do business.",
+    post: "Feedback.ThirdFeedback.Post",
+    text: "Feedback.ThirdFeedback.Text",
     img: "./portfolio/ums-stroy/feedback.jpg",
   },
   {
     id: 1,
     name: "Dmitriy Kuhar",
-    post: "director building company “GRANDSTROY”",
-    text: "the site was developed quickly and exactly as I had planned. communication is at the highest level. great job!",
+    post: "Feedback.SecondFeedback.Post",
+    text: "Feedback.SecondFeedback.Text",
     img: "./portfolio/grand-stroy/feedback.jpg",
   },
   {
     id: 2,
     name: "Aleksandr Kamoza",
-    post: "director building company “KAMOZA A.I.”",
-    text: "a landing page with examples of work was urgently needed. i turned to Slava and he helped. everything is wonderful!",
+    post: "Feedback.FirstFeedback.Post",
+    text: "Feedback.FirstFeedback.Text",
     img: "./portfolio/kamoza/feedback.jpg",
   },
 ];
@@ -62,7 +62,7 @@ export const Feedback = forwardRef<HTMLDivElement, FeedbackProps>(
                     <Box>
                       <NameBox>
                         <ItemTitle variant="h4">{tc(feedback.name)}</ItemTitle>
-                        <Typography variant="subtitle2">
+                        <Typography variant="body2">
                           {tc(feedback.post)}
                         </Typography>
                       </NameBox>

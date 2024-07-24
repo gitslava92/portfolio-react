@@ -22,7 +22,9 @@ export const ru = {
       socials: "соц. сети",
       "send message": "отправить сообщение",
       copyrights: "все права защищены",
-      "hi! I am a Frontend developer with over 2 years of react development experience. i would like to get more interesting tasks and improve my development skills.":
+
+      // Hello
+      "Hello.SectionText":
         "привет! Я Frontend разработчик с опытом разработки на react более 2х лет. хотел бы получить больше интересных задач и улучшить свои навыки разработки.",
 
       // Skills
@@ -36,22 +38,26 @@ export const ru = {
       // Experiense
       present: "настоящее время",
       "sourсe, ltd": "соурс, ООО",
-      "my love of programming and active participation in a large startup project allowed me to gain a lot of experience in a short time.":
+      "Experience.SectionText":
         "любовь к программированию и активное участие в большом стартап проекте позволило мне получить большой опыт за короткое время.",
-      "copying (creating templates) and layout of html, css, js, jquery sites, code and content optimization":
+      "Experiense.FirstWork.Text":
         "копирование (создание шаблонов) и верстка сайтов html, css, js, jquery, bootstrap, оптимизация кода и контента",
-      "website development on react, vue, pet project: CSV editor - desktop application on electron.js + react.":
-        "разработка веб-сайтов на react, vue, персональный проект: редактор CSV-файлов - настольное приложение на electron.js + react.",
-      "development of a trading platform (marketplace): routing, authorization (jwt), chats (based on mattermost), offers, responses, transactions, payments, reviews, ratings, disputes, user account, administrator account: authorization, payment administration, dispute resolution, chats, currencies, wallets.":
-        "разработка торговой площадки (маркетплейса): роутинг, авторизация (jwt), чаты (на основе mattermost), офферы, отклики, сделки, платежи, отзывы, рейтинги, споры, кабинет пользователя, кабинет администратора: авторизация, администрирование платежей, разрешение споров, чаты, валюты, кошельки.",
+      "Experiense.SecondWork.Text": "создание и доработка компонентов CRM системы компании. работа с таблицами, фильтрами, роутингом, MUI 4, Typescript, Redux Toolkit, Redux Saga. взаимодействие с бэкендом по REST API, Axios. Docker, Webpack.",
+      "Experiense.ThirdWork.Text":
+        "разработка сайтов для строительных компаний. полностью настраивал сборку проекта, роутинг, верстал все компоненты ||Грандстрой и ЮМС-Строй, - использовал: React + MUI 5 + Typescript ||ИП Камоза А.И., - использовал: Vue3, Vuetify",
+      "Experiense.FourthWork.Text":
+        "Работа в команде, по созданию комплексной платформы учета и передачи информации (маркетплейс). рабочие процессы строились на базе SCRUM (спринты, youtrack, эстимейты) и GitHub. ||Принимал прямое участие в разработке практически всех компонентов в проекте: офферы, отклики, сделки, платежи, отзывы, рейтинги, споры, чаты (на основе matter most), кабинет пользователя, кабинет администратора, администрирование валют, кошельков, платежей и споров. настраивал роутинг и авторизацию (jwt). а также наполнял storybook, писал тесты на Vitest. ||Использовал: Typescript, React JS, HTML, CSS, SASS, Materialyi 5, Styled Components, Graph, Apollo, WebSocket, Git, Docker, Vite, StoryBook, Vitest. ||Pet project: редактор CSV файлов. Самостоятельно разработал приложение на electron + rect + mui. Автоматическая, специфическая обработка и валидация csv файлов.",
 
       // Education
-      "i have always been convinced of the importance of education. i try to learn something new every day.":
+      "Education.SectionTitle":
         "я всегда был убежден в важности образования. каждый день стараюсь узнавать что-то новое.",
-      "Vadim Prokopchuk's layout course": "Курс по верстке Вадима Прокопчука",
-      "from 0 to 1": "от 0 до 1",
-      "html, css/sass/scss, BEM methodology, jquery basics, js basics, gulp, git, adaptive layout, website hosting":
+      "Education.SecondEducation.Title": "Курс по верстке Вадима Прокопчука",
+      "Education.SecondEducation.SubTitle": "от 0 до 1",
+      "Education.SecondEducation.Text":
         "html, css/sass/scss, методология БЭМ, основы jquery, основы js, gulp, git, адаптивная верстка, деплой сайта на хостинг",
+      "Education.FirstEducation.Title": "Донбасская национальная академия строительства и архитектуры, Макеевка",
+      "Education.FirstEducation.SubTitle": "ДонНАСА",
+      "Education.FirstEducation.Text": "Экономика, маркетинг, менеджмент. Экономика предприятий",
 
       // Portfolio
       "all projects": "все проекты",
@@ -81,21 +87,21 @@ export const ru = {
 
       // Feedback
       "Mihail Boyko": "Михаил Бойко",
-      "director building company “UMS-STROY”":
+      "Feedback.ThirdFeedback.Post":
         "директор строительной компании \"ЮМС-СТРОЙ\"",
-      "i got exactly what I wanted and in a short time. They are very attentive and comfortable in communication. it was a pleasure to do business.":
+      "Feedback.ThirdFeedback.Text":
         "получил именно то что хотел и в короткий срок. очень внимательные и комфортный в общении. было приятно иметь дело.",
 
       "Dmitriy Kuhar": "Дмитрий Кухарь",
-      "director building company “GRANDSTROY”":
+      "Feedback.SecondFeedback.Post":
         "директор строительной компании \"ГРАНДСТРОЙ\"",
-      "the site was developed quickly and exactly as I had planned. communication is at the highest level. great job!":
+      "Feedback.SecondFeedback.Text":
         "сайт разработал быстро и именно таким, как я и планировал. коммуникация на высшем уровне. отличная работа!",
 
       "Aleksandr Kamoza": "Александр Камоза",
-      "director building company “KAMOZA A.I.”":
+      "Feedback.FirstFeedback.Post":
         "директор строительной компании \"КАМОЗА А.И.\"",
-      "a landing page with examples of work was urgently needed. i turned to Slava and he helped. everything is wonderful!":
+      "Feedback.FirstFeedback.Text":
         "срочно был нужен лендинг с примерами работ. обратился к Славе и он помог. все замечательно!",
 
       // Reviews

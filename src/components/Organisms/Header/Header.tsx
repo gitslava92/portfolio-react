@@ -6,7 +6,7 @@ import {
   DrawerRootBox,
   Toolbar,
   IconButton,
-  MenuItemsBox
+  MenuItemsBox,
 } from "@components/Organisms/Header/Header.styles";
 import { MenuItemType } from "@components/Pages/LandingPage/LandingPage";
 import { Logo } from "@components/assets/Logo";
@@ -18,7 +18,7 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemText
+  ListItemText,
 } from "@mui/material";
 import { useTheme, Theme } from "@mui/material/styles";
 import { Box, Container } from "@mui/system";
@@ -51,7 +51,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
     const ref = refs[id] as RefObject<HTMLDivElement>;
     ref.current?.scrollIntoView({
       behavior: "smooth",
-      block: "start"
+      block: "start",
     });
   };
 
@@ -113,12 +113,10 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>((props, ref) => {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true
+            keepMounted: true,
           }}
         >
-          <DrawerBox>
-            {drawer}
-          </DrawerBox>
+          <DrawerBox>{drawer}</DrawerBox>
         </Drawer>
       </nav>
     </Box>

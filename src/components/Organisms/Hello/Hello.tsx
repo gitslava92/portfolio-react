@@ -26,10 +26,7 @@ export const Hello = forwardRef<HTMLDivElement, HelloProps>((props, ref) => {
             {tc("i am Viacheslav")}
           </Typography>
           <Typography variant="body1" sx={{ marginBottom: 2 }}>
-            {tca(
-              "hi! I am a Frontend developer with over 2 years of react development experience. i would like to get more interesting tasks and improve my development skills.",
-              ". "
-            )}
+            {tca("Hello.SectionText", ". ")}
           </Typography>
 
           <ContactsInfo setModalOpen={setModalOpen} />

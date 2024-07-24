@@ -19,7 +19,7 @@ export const RootBox = styled(Box, {
   padding: theme.spacing(2),
   borderRadius: theme.spacing(1),
   maxHeight: maxHeight || "initial",
-  height: maxHeight ? "95%" : "initial",
+  height: maxHeight && maxHeight !== "auto" ? "95%" : "initial",
   overflowY: maxHeight ? "auto" : "unset",
   [theme.breakpoints.up("md")]: {
     padding: theme.spacing(4),

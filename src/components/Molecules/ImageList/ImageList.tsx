@@ -77,7 +77,12 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
           maxWidth="85vw"
           maxHeight="auto"
         >
-          <Box display="flex" justifyContent="space-between" gap={1}>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            gap={1}
+            alignItems="center"
+          >
             <Title variant="h2" sx={{ marginBottom: 1 }}>
               {currentPortfolioItem?.title}
             </Title>
@@ -92,23 +97,20 @@ export const ImageList = ({ portfolio }: ImageListProps) => {
             {currentPortfolioItem?.subtitle}
           </Typography>
 
-          <Box display="flex" gap={2}>
-            <Typography
-              variant="body1"
-              fontWeight={600}
-              sx={{ minWidth: 80 }}
-            >{`${tc("stack")}:`}</Typography>
+          <Box display="flex" gap={2} alignItems="center">
+            <Typography variant="body1" fontWeight={600} sx={{ minWidth: 80 }}>
+              {`${tc("stack")}:`}
+            </Typography>
+
             <Typography variant="body1">
               {currentPortfolioItem?.stack}
             </Typography>
           </Box>
 
-          <Box display="flex" gap={2} mb={3}>
-            <Typography
-              variant="body1"
-              fontWeight={600}
-              sx={{ minWidth: 80 }}
-            >{`${tc("date")}:`}</Typography>
+          <Box display="flex" gap={2} alignItems="center" mb={3}>
+            <Typography variant="body1" fontWeight={600} sx={{ minWidth: 80 }}>
+              {`${tc("date")}:`}
+            </Typography>
             <Typography variant="body1">
               {getPeriod(currentPortfolioItem?.period || [], tc)}
             </Typography>

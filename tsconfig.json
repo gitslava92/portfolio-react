@@ -3,7 +3,6 @@
     "baseUrl": "./src/",
     "paths": {
       "@components/*": ["./components/*"],
-      "@gql/*": ["./gql/*"],
       "@common/*": ["./common/*"]
     },
     "target": "ESNext",

@@ -35,6 +35,7 @@ export const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
           <Title variant="h2" sx={{ marginBottom: 1 }}>
             {tc("skills")}
           </Title>
+
           <Typography variant="body1" sx={{ marginBottom: 2 }}>
             {tc(
               "i am inspired by the opportunity to work with professionals who, like me, are passionate about creating something truly unique and meaningful."
@@ -45,7 +46,10 @@ export const Skills = forwardRef<HTMLDivElement, SkillsProps>((props, ref) => {
           <Grid container spacing={2}>
             {getSkills(tc).map((skill) => (
               <Grid item xs={12} md={6} key={skill.id}>
-                <ItemTitle variant="h4">{tc(skill.title)}</ItemTitle>
+                <ItemTitle variant="h4" sx={{ marginBottom: 1 }}>
+                  {tc(skill.title)}
+                </ItemTitle>
+
                 <Typography variant="body1">{tc(skill.text)}</Typography>
               </Grid>
             ))}

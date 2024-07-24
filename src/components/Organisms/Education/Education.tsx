@@ -1,8 +1,8 @@
 import { getPeriod } from "@common/helpers";
 import { useCustomTranslation } from "@common/i18n";
 import { ItemTitle, Section, Title } from "@components/Atoms/styles";
+import { TitleBox } from "@components/Organisms/Education/Education.styles";
 import { Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
 import { forwardRef } from "react";
 
 interface EducationProps {
@@ -12,10 +12,17 @@ interface EducationProps {
 const educations = [
   {
     id: 0,
-    title: "Vadim Prokopchuk's layout course",
-    subtitle: "from 0 to 1",
+    title: "Education.SecondEducation.Title",
+    subtitle: "Education.SecondEducation.SubTitle",
     period: ["2020-12-01T00:00:00Z", "2021-02-14T00:00:00Z"],
-    text: "html, css/sass/scss, BEM methodology, jquery basics, js basics, gulp, git, adaptive layout, website hosting",
+    text: "Education.SecondEducation.Text",
+  },
+  {
+    id: 1,
+    title: "Education.FirstEducation.Title",
+    subtitle: "Education.FirstEducation.SubTitle",
+    period: ["1999-09-01T00:00:00Z", "2004-06-01T00:00:00Z"],
+    text: "Education.FirstEducation.Text",
   },
 ];
 
@@ -31,29 +38,24 @@ export const Education = forwardRef<HTMLDivElement, EducationProps>(
             <Title variant="h2" sx={{ marginBottom: 1 }}>
               {tc("education")}
             </Title>
+
             <Typography variant="body1" sx={{ marginBottom: 2 }}>
-              {tca(
-                "i have always been convinced of the importance of education. i try to learn something new every day.",
-                ". "
-              )}
+              {tca("Education.SectionTitle", ". ")}
             </Typography>
           </Grid>
+
           <Grid item xs={12} md={8}>
-            <Grid container spacing={2}>
+            <Grid container spacing={3}>
               {educations.map((education) => (
-                <Grid
-                  item
-                  xs={12}
-                  md={educations.length > 1 ? 6 : 12}
-                  key={education.id}
-                >
-                  <Box display="flex" gap={1} mb={1}>
+                <Grid item xs={12} key={education.id}>
+                  <TitleBox>
                     <ItemTitle variant="h4">{tc(education.title)}</ItemTitle>
-                    <Typography variant="body1">
+                    <Typography variant="body2" sx={{ whiteSpace: "nowrap" }}>
                       {tc(education.subtitle)}
                     </Typography>
-                  </Box>
-                  <Typography variant="body1" sx={{ marginBottom: 1 }}>
+                  </TitleBox>
+
+                  <Typography variant="body2" sx={{ marginBottom: 1 }}>
                     {getPeriod(education.period, tc)}
                   </Typography>
                   <Typography variant="body1">{t(education.text)}</Typography>
